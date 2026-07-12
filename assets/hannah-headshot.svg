@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="940" viewBox="0 0 760 940" role="img" aria-label="Hannah Mara headshot placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9f6ed"/>
+      <stop offset="1" stop-color="#e9e4d8"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#111" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="760" height="940" fill="url(#bg)"/>
+  <rect width="760" height="940" fill="url(#grid)"/>
+  <circle cx="380" cy="365" r="145" fill="#d5cec0"/>
+  <path d="M156 850 C175 625 280 545 380 545 C480 545 585 625 604 850 Z" fill="#111111"/>
+  <circle cx="380" cy="340" r="120" fill="#f0d8c6"/>
+  <path d="M270 350 C265 215 340 175 405 180 C510 187 520 285 488 392 C470 330 438 284 364 271 C334 320 300 347 270 350 Z" fill="#292524"/>
+  <rect x="115" y="735" width="530" height="112" rx="18" fill="#f4c400"/>
+  <text x="380" y="775" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="800" fill="#111111">APPROVED HEADSHOT PLACEHOLDER</text>
+  <text x="380" y="812" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#111111">Replace with Hannah's white floral top headshot</text>
+  <text x="380" y="887" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#595650">Use the same filename: hannah-headshot.svg or update the image path</text>
+</svg>

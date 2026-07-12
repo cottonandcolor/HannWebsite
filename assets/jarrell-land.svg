@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-label="53.678± ACRES · JARRELL">
+  <rect width="900" height="560" fill="#f7f4eb"/>
+  <path d="M0 0 H900 V85 H0 Z" fill="#111111"/>
+  <rect x="0" y="85" width="18" height="475" fill="#f4c400"/>
+  
+        <path d="M0 410 C160 330 280 470 440 380 C610 285 710 410 900 300 V560 H0 Z" fill="#b9c88e"/>
+        <path d="M0 470 C170 390 310 530 500 425 C690 320 790 430 900 385 V560 H0 Z" fill="#758c52"/>
+        <path d="M120 200 L235 120 L350 200" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+        <path d="M235 120 V330" stroke="#111" stroke-width="8"/>
+        <path d="M675 150 V390 M625 200 H725 M640 260 H710 M650 320 H700" stroke="#111" stroke-width="6" opacity=".45"/>
+        
+  <rect x="45" y="40" width="225" height="5" fill="#f4c400"/>
+  <text x="45" y="70" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff">53.678± ACRES · JARRELL</text>
+  <rect x="35" y="460" width="830" height="70" rx="12" fill="#111111" fill-opacity=".92"/>
+  <text x="60" y="489" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#f4c400">PHOTO PLACEHOLDER</text>
+  <text x="60" y="514" font-family="Arial, sans-serif" font-size="15" fill="#ffffff">Replace with the approved real aerial or land photograph.</text>
+</svg>
