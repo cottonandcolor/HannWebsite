@@ -365,18 +365,20 @@ ul { margin: 0; padding-left: 1.1em; }
 .about { background: var(--mist); }
 .about-split {
   display: grid;
-  grid-template-columns: minmax(220px, 340px) 1fr;
-  gap: 0 48px;
+  grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+  gap: 40px 48px;
   align-items: center;
+  justify-content: start;
   width: min(1100px, calc(100% - 40px));
   margin: 0 auto;
   padding: 72px 0;
-  min-height: 0;
 }
 .about-photo {
   overflow: hidden;
+  width: 100%;
   max-width: 340px;
-  margin: 0 auto;
+  margin: 0;
+  justify-self: start;
 }
 .about-photo img {
   width: 100%;
@@ -384,12 +386,14 @@ ul { margin: 0; padding-left: 1.1em; }
   aspect-ratio: 3 / 4;
   object-fit: cover;
   object-position: center 18%;
-  min-height: 0;
   display: block;
 }
 .about-copy {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  text-align: left;
 }
 .about-lead {
   margin: 8px 0 16px;
@@ -839,8 +843,12 @@ ul { margin: 0; padding-left: 1.1em; }
   .menu-toggle { display: block; }
   .brand-copy { display: none; }
   .hero-search-row { grid-template-columns: 1fr; }
-  .about-split, .seller-grid, .contact-grid, .tools-grid, .valuation-grid { grid-template-columns: 1fr; }
-  .about-split { gap: 28px; padding: 48px 0; }
+  .seller-grid, .contact-grid, .tools-grid, .valuation-grid { grid-template-columns: 1fr; }
+  .about-split {
+    grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+    gap: 28px 32px;
+    padding: 48px 0;
+  }
   .about-photo { max-width: 260px; }
   .process-steps { grid-template-columns: 1fr 1fr 1fr; }
   .form-row.triple { grid-template-columns: 1fr; }
@@ -867,6 +875,12 @@ ul { margin: 0; padding-left: 1.1em; }
   .review-carousel .review-card { height: 260px; max-height: 260px; }
   .property-overlay h3 { font-size: 22px; }
   .property-price { font-size: 22px; }
+  .about-split {
+    grid-template-columns: minmax(140px, 200px) minmax(0, 1fr);
+    gap: 20px 24px;
+    padding: 40px 0;
+  }
+  .about-photo { max-width: 200px; }
   .lifestyle-grid, .form-row, .footer-grid, .process-steps { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
   .mobile-cta-bar { display: grid; }
