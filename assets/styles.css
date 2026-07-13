@@ -585,25 +585,31 @@ ul { margin: 0; padding-left: 1.1em; }
 }
 .inline-link { color: var(--accent-deep); font-weight: 700; }
 .inline-link:hover { text-decoration: underline; }
-.review-grid { display: grid; grid-template-columns: 1.2fr .9fr .9fr; gap: 12px; }
-.review-grid-two { grid-template-columns: 1.2fr 1fr; }
-.review-card {
-  margin: 0; background: #fff; border: 1px solid var(--line); padding: 26px;
+.review-carousel .property-track {
+  grid-auto-columns: minmax(300px, 380px);
+  align-items: stretch;
 }
-.review-card.large {
-  background: var(--paper);
-  border-color: var(--ink);
+.review-carousel .review-card {
+  scroll-snap-align: start;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 26px;
 }
+.review-card-top .stars { color: #f4b400; letter-spacing: .1em; }
 .stars { color: var(--accent); letter-spacing: .1em; }
-.review-card-top .stars { color: #f4b400; }
 .review-card blockquote {
   margin: 16px 0 0;
   font-family: var(--font-display);
-  font-size: 22px;
-  line-height: 1.35;
+  font-size: 18px;
+  line-height: 1.4;
   font-style: italic;
+  flex: 1;
 }
-.review-card:not(.large) blockquote { font-size: 17px; }
 .review-card figcaption {
   margin-top: 18px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
   font-weight: 700; color: var(--muted);
@@ -813,8 +819,6 @@ ul { margin: 0; padding-left: 1.1em; }
   .process-steps { grid-template-columns: 1fr 1fr 1fr; }
   .form-row.triple { grid-template-columns: 1fr; }
   .lifestyle-grid { grid-template-columns: 1fr 1fr; }
-  .review-grid { grid-template-columns: 1fr 1fr; }
-  .review-card.large { grid-column: 1 / -1; }
   .seller-card { border-right: 0; border-bottom: 1px solid var(--line); }
 }
 
@@ -831,9 +835,13 @@ ul { margin: 0; padding-left: 1.1em; }
     padding-bottom: 8px;
   }
   .property-track .property-card { min-height: 300px; height: 300px; }
+  .review-carousel .property-track {
+    grid-auto-columns: minmax(280px, 85vw);
+  }
+  .review-carousel .review-card { min-height: 280px; }
   .property-overlay h3 { font-size: 22px; }
   .property-price { font-size: 22px; }
-  .lifestyle-grid, .review-grid, .form-row, .footer-grid, .process-steps { grid-template-columns: 1fr; }
+  .lifestyle-grid, .form-row, .footer-grid, .process-steps { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
   .mobile-cta-bar { display: grid; }
 }

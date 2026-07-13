@@ -123,7 +123,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   if (!track || !prev || !next) return;
 
   const scrollAmount = () => {
-    const card = track.querySelector('.property-card');
+    const card = track.querySelector('.property-card, .review-card');
     const gap = 14;
     return card ? card.getBoundingClientRect().width + gap : track.clientWidth * 0.8;
   };
