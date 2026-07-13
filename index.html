@@ -130,12 +130,13 @@
         </p>
         <div class="filter-row" role="group" aria-label="Filter listings">
           <button class="filter-button active" data-filter="all" type="button">All</button>
+          <button class="filter-button" data-filter="active" type="button">Active</button>
           <button class="filter-button" data-filter="residential" type="button">Residential</button>
           <button class="filter-button" data-filter="land" type="button">Land</button>
           <button class="filter-button" data-filter="sold" type="button">Sold</button>
         </div>
         <div class="property-grid">
-          <article class="property-card property-feature" data-category="residential">
+          <article class="property-card property-feature" data-category="residential" data-status="active">
             <img src="assets/806-clearwell/01.jpg" alt="806 Clearwell St, Cedar Park — active listing" width="1024" height="671" loading="eager" />
             <span class="property-status status-active">Active</span>
             <div class="property-overlay">
@@ -158,7 +159,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="land">
+          <article class="property-card" data-category="land" data-status="active">
             <img src="assets/000-cr315/01.jpg" alt="County Road 315, Jarrell — active acreage listing" width="1024" height="683" />
             <span class="property-status status-active">Active</span>
             <div class="property-overlay">
@@ -181,7 +182,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="land">
+          <article class="property-card" data-category="land" data-status="active">
             <img src="assets/7206-flagship/01.jpg" alt="7206 Flagship Park Dr, Jonestown — active lot listing" width="1024" height="683" />
             <span class="property-status status-active">Active</span>
             <div class="property-overlay">
@@ -204,7 +205,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="land">
+          <article class="property-card" data-category="land" data-status="active">
             <img src="assets/900-cr406/02.jpg" alt="900 CR 406, Taylor — active land listing" width="1024" height="683" />
             <span class="property-status status-active">Active</span>
             <div class="property-overlay">
@@ -227,7 +228,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/3001-cedarlawn/01.jpg" alt="3001 Cedarlawn Cir, Austin — closed sale" width="1024" height="682" />
             <span class="property-status status-sold">Sold</span>
             <div class="property-overlay">
@@ -241,7 +242,7 @@
           </article>
 
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/136-la-venta/01.jpg" alt="136 La Venta Loop, Liberty Hill — closed listing" width="1024" height="683" loading="lazy" />
             <span class="property-status status-sold">Sold</span>
             <div class="property-overlay">
@@ -254,7 +255,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/2500-forest-creek/01.jpg" alt="2500 Forest Creek Dr #602, Round Rock — closed listing" width="1024" height="683" loading="lazy" />
             <span class="property-status status-sold">Leased</span>
             <div class="property-overlay">
@@ -267,7 +268,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/3904-harvey-penick/01.jpg" alt="3904 Harvey Penick Dr, Round Rock — closed listing" width="1024" height="683" loading="lazy" />
             <span class="property-status status-sold">Sold</span>
             <div class="property-overlay">
@@ -280,7 +281,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/144-alicante/01.jpg" alt="144 Alicante Ln, Liberty Hill — closed listing" width="1024" height="683" loading="lazy" />
             <span class="property-status status-sold">Sold</span>
             <div class="property-overlay">
@@ -293,7 +294,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/1233-peregrine/01.jpg" alt="1233 Peregrine Way, Leander — closed listing" width="1024" height="683" loading="lazy" />
             <span class="property-status status-sold">Sold</span>
             <div class="property-overlay">
@@ -306,7 +307,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/7603-napier/01.jpg" alt="7603 Napier Trl, Austin — closed listing" width="1024" height="683" loading="lazy" />
             <span class="property-status status-sold">Sold</span>
             <div class="property-overlay">
@@ -319,7 +320,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/103-red-buckeye/01.jpg" alt="103 Red Buckeye St, Hutto — closed listing" width="1024" height="683" loading="lazy" />
             <span class="property-status status-sold">Sold</span>
             <div class="property-overlay">
@@ -332,7 +333,7 @@
             </div>
           </article>
 
-          <article class="property-card" data-category="sold">
+          <article class="property-card" data-category="sold" data-status="sold">
             <img src="assets/9109-villa-norte/01.jpg" alt="9109 Villa Norte Dr, Austin — closed listing" width="1024" height="683" loading="lazy" />
             <span class="property-status status-sold">Sold</span>
             <div class="property-overlay">

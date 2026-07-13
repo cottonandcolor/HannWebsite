@@ -123,7 +123,11 @@ filterButtons.forEach(button => {
     button.classList.add('active');
     const filter = button.dataset.filter;
     propertyCards.forEach(card => {
-      card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
+      const match =
+        filter === 'all' ||
+        (filter === 'active' && card.dataset.status === 'active') ||
+        (filter !== 'active' && card.dataset.category === filter);
+      card.classList.toggle('hidden', !match);
     });
   });
 });
