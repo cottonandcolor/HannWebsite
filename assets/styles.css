@@ -365,17 +365,31 @@ ul { margin: 0; padding-left: 1.1em; }
 .about { background: var(--mist); }
 .about-split {
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  min-height: 640px;
+  grid-template-columns: minmax(220px, 340px) 1fr;
+  gap: 0 48px;
+  align-items: center;
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0;
+  min-height: 0;
 }
-.about-photo { overflow: hidden; }
+.about-photo {
+  overflow: hidden;
+  max-width: 340px;
+  margin: 0 auto;
+}
 .about-photo img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center 18%;
-  min-height: 520px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 18%;
+  min-height: 0;
+  display: block;
 }
 .about-copy {
   display: flex; flex-direction: column; justify-content: center;
-  padding: clamp(40px, 6vw, 72px);
+  padding: 8px 0;
 }
 .about-lead {
   margin: 8px 0 16px;
@@ -586,7 +600,7 @@ ul { margin: 0; padding-left: 1.1em; }
 .inline-link { color: var(--accent-deep); font-weight: 700; }
 .inline-link:hover { text-decoration: underline; }
 .review-carousel .property-track {
-  grid-auto-columns: minmax(300px, 380px);
+  grid-auto-columns: minmax(280px, 320px);
   align-items: stretch;
 }
 .review-carousel .review-card {
@@ -594,25 +608,35 @@ ul { margin: 0; padding-left: 1.1em; }
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 320px;
-  height: auto;
+  height: 280px;
+  max-height: 280px;
   background: #fff;
   border: 1px solid var(--line);
-  padding: 26px;
+  padding: 20px;
 }
 .review-card-top .stars { color: #f4b400; letter-spacing: .1em; }
 .stars { color: var(--accent); letter-spacing: .1em; }
 .review-card blockquote {
-  margin: 16px 0 0;
+  margin: 12px 0 0;
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.4;
   font-style: italic;
   flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 .review-card figcaption {
-  margin-top: 18px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
-  font-weight: 700; color: var(--muted);
+  margin-top: 12px;
+  flex-shrink: 0;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted);
 }
 
 .contact { padding: 88px 0; background: var(--paper); }
@@ -816,6 +840,8 @@ ul { margin: 0; padding-left: 1.1em; }
   .brand-copy { display: none; }
   .hero-search-row { grid-template-columns: 1fr; }
   .about-split, .seller-grid, .contact-grid, .tools-grid, .valuation-grid { grid-template-columns: 1fr; }
+  .about-split { gap: 28px; padding: 48px 0; }
+  .about-photo { max-width: 260px; }
   .process-steps { grid-template-columns: 1fr 1fr 1fr; }
   .form-row.triple { grid-template-columns: 1fr; }
   .lifestyle-grid { grid-template-columns: 1fr 1fr; }
@@ -836,9 +862,9 @@ ul { margin: 0; padding-left: 1.1em; }
   }
   .property-track .property-card { min-height: 300px; height: 300px; }
   .review-carousel .property-track {
-    grid-auto-columns: minmax(280px, 85vw);
+    grid-auto-columns: minmax(260px, 78vw);
   }
-  .review-carousel .review-card { min-height: 280px; }
+  .review-carousel .review-card { height: 260px; max-height: 260px; }
   .property-overlay h3 { font-size: 22px; }
   .property-price { font-size: 22px; }
   .lifestyle-grid, .form-row, .footer-grid, .process-steps { grid-template-columns: 1fr; }
