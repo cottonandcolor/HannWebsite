@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hannah Mara, REALTOR® with Full Circle Real Estate — Central Texas." />
+  <title>Hannah Mara · Exclusive Listings | Full Circle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip</a>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#top"><img src="../assets/full-circle-logo-horizontal.png" alt="Full Circle" width="190" height="57" /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#exclusive">Exclusive</a>
+        <a href="#contact">Inquire</a>
+        <a href="tel:+15126801171">512-680-1171</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero-listing">
+      <img class="bg" src="../assets/806-clearwell/01.jpg" alt="" />
+      <div class="scrim"></div>
+      <div class="inner container">
+        <p class="eyebrow">Exclusive listing</p>
+        <h1>806 Clearwell St</h1>
+        <p class="price">$675,000</p>
+        <div class="meta"><span>3 bd</span><span>3 ba</span><span>2,224 sq ft</span><span>Cedar Park · Three Points</span></div>
+        <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+          
+              <button class="property-link" type="button"
+                data-title="806 Clearwell St" data-subtitle="Cedar Park · Active · MLS# 8687449"
+                data-price="$675,000" data-tour="https://www.propertypanorama.com/instaview/aus/8687449"
+                data-gallery="../assets/806-clearwell" data-gallery-count="54"
+                data-details="Milestone-built home in gated Three Points. 3/3, 2,224 sq ft, 2020. Verify all details independently.">View details</button>
+          <a class="button primary" href="#contact" data-inquiry="Buying a home">Request a showing</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="exclusive">
+      <div class="container">
+        <div class="section-head">
+          <div><p class="eyebrow">Portfolio</p><h2>Our exclusive listings</h2></div>
+          <div class="filter-row" role="group">
+            <button class="filter-button active" data-filter="all" type="button">All</button>
+            <button class="filter-button" data-filter="residential" type="button">Homes</button>
+            <button class="filter-button" data-filter="land" type="button">Land</button>
+            <button class="filter-button" data-filter="commercial" type="button">Commercial</button>
+          </div>
+        </div>
+        <div class="gallery">
+          <article class="property-card wide" data-category="residential">
+            <img src="../assets/806-clearwell/12.jpg" alt="Clearwell interior" onerror="this.src='../assets/806-clearwell/01.jpg'" />
+            <span class="property-status">Active</span>
+            <div class="overlay"><h3>806 Clearwell St</h3><p>$675,000</p>
+              <button class="property-link" type="button"
+                data-title="806 Clearwell St" data-subtitle="Cedar Park · Active · MLS# 8687449"
+                data-price="$675,000" data-tour="https://www.propertypanorama.com/instaview/aus/8687449"
+                data-gallery="../assets/806-clearwell" data-gallery-count="54"
+                data-details="Milestone-built home in gated Three Points. 3/3, 2,224 sq ft, 2020. Verify all details independently.">View details</button></div>
+          </article>
+          <article class="property-card" data-category="residential">
+            <img src="../assets/1220-calendula.jpg" alt="" />
+            <span class="property-status" style="background:#fff">Sold</span>
+            <div class="overlay"><h3>Calendula Trl</h3>
+              <button class="property-link" type="button" data-title="1220 Calendula Trl" data-subtitle="Sold" data-details="Georgetown Highland home.">Details</button></div>
+          </article>
+          <article class="property-card" data-category="land">
+            <img src="../assets/jarrell-land.jpg" alt="" />
+            <span class="property-status">Active</span>
+            <div class="overlay"><h3>53± Acres</h3>
+              <button class="property-link" type="button" data-title="53.678± Acres" data-subtitle="Jarrell" data-details="Land near Sonterra.">Details</button></div>
+          </article>
+          <article class="property-card" data-category="commercial">
+            <img src="../assets/commercial-portfolio.jpg" alt="" />
+            <span class="property-status">Rep</span>
+            <div class="overlay"><h3>Commercial</h3>
+              <button class="property-link" type="button" data-title="Commercial" data-subtitle="Central Texas" data-details="Tenant representation.">Details</button></div>
+          </article>
+          <article class="property-card" data-category="residential">
+            <img src="../assets/806-clearwell/20.jpg" alt="" onerror="this.src='../assets/path-buy.jpg'" />
+            <div class="overlay"><h3>More photos</h3>
+              <button class="property-link" type="button" data-title="806 Clearwell St" data-subtitle="Gallery" data-price="$675,000" data-gallery="../assets/806-clearwell" data-gallery-count="54" data-details="Full photo set.">Open gallery</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Private inquire</p>
+          <h2>Ask about a listing</h2>
+          <p style="margin-top:14px;color:var(--muted)">Hannah Mara · Full Circle Real Estate · 512-680-1171</p>
+        </div>
+        
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/hannah@fullcircle-realestate.com" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from Hannah Mara website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="form-row">
+            <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Phone<input type="tel" name="phone" autocomplete="tel" /></label>
+          </div>
+          <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          <label>Inquiry
+            <select name="inquiry" id="inquiry-select">
+              <option>Buying a home</option>
+              <option>Selling a property</option>
+              <option>Land and acreage</option>
+              <option>Commercial real estate</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="4"></textarea></label>
+          <button class="button primary full" type="submit" id="contact-submit">Send Message</button>
+          <p class="form-note">Hannah typically replies within one business day.</p>
+          <div class="form-success" id="form-success" hidden>
+            <strong>Thank you — message sent.</strong>
+            <p>Call <a href="tel:+15126801171">512-680-1171</a>.</p>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <img src="../assets/full-circle-logo-horizontal.png" alt="Full Circle" class="footer-logo" width="200" height="60" />
+        <p><strong>Hannah Mara</strong> · REALTOR®<br />512-680-1171</p>
+      </div>
+      <div>
+        <p>Full Circle Real Estate · Leander, TX</p>
+        <p class="muted">© <span id="year"></span></p>
+        <p><a href="../versions/">Compare all designs →</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-cta-bar" aria-label="Quick contact">
+    <a href="tel:+15126801171">Call</a>
+    <a href="sms:+15126801171">Text</a>
+    <a class="mobile-cta-primary" href="#contact">Schedule</a>
+  </nav>
+
+  <dialog class="property-modal" id="property-modal">
+    <button class="modal-close" type="button" aria-label="Close">×</button>
+    <div class="modal-gallery" id="modal-gallery" hidden>
+      <div class="modal-gallery-main">
+        <button class="modal-gallery-nav prev" type="button" aria-label="Previous">‹</button>
+        <img id="modal-gallery-image" src="" alt="" />
+        <button class="modal-gallery-nav next" type="button" aria-label="Next">›</button>
+        <span class="modal-gallery-count" id="modal-gallery-count"></span>
+      </div>
+      <div class="modal-gallery-thumbs" id="modal-gallery-thumbs"></div>
+    </div>
+    <p class="eyebrow" id="modal-subtitle"></p>
+    <h2 id="modal-title"></h2>
+    <p class="modal-price" id="modal-price" hidden></p>
+    <p id="modal-details"></p>
+    <div class="modal-actions">
+      <a class="button primary" href="#contact" id="modal-contact">Ask Hannah</a>
+      <a class="button ghost" id="modal-tour" href="#" target="_blank" rel="noopener" hidden>Virtual tour</a>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body></html>

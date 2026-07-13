@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hannah Mara, REALTOR® with Full Circle Real Estate — Central Texas buy, sell, land and commercial." />
+  <title>Hannah Mara · Brokerage Style | Full Circle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip</a>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#top"><img src="../assets/full-circle-logo-horizontal.png" alt="Full Circle Real Estate" width="200" height="60" /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#communities">Communities</a>
+        <a href="#properties">Listings</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="hero-inner container">
+        <p class="eyebrow">Your go-to Central Texas REALTOR®</p>
+        <h1>Building strong relationships. Delivering solid results.</h1>
+        <p class="hero-lead">Hannah Mara helps buyers, sellers, land and commercial clients move with clarity across Austin and Central Texas.</p>
+        <form class="hero-search" id="hero-search" action="#contact">
+          <div class="hero-search-row">
+            <select id="hero-intent" name="intent">
+              <option value="Buying a home">Buy</option>
+              <option value="Selling a property">Sell</option>
+              <option value="Land and acreage">Land</option>
+              <option value="Commercial real estate">Commercial</option>
+            </select>
+            <select id="hero-area" name="area">
+              <option value="">Area</option>
+              <option>Austin</option><option>Cedar Park</option><option>Leander</option>
+              <option>Georgetown</option><option>Round Rock</option><option>Jarrell / Acreage</option>
+            </select>
+            <button class="button primary" type="submit">Search</button>
+          </div>
+        </form>
+        <div class="stats">
+          <div class="stat"><strong>30+</strong><span>Years in Austin area</span></div>
+          <div class="stat"><strong>Buy · Sell</strong><span>Land · Commercial</span></div>
+          <div class="stat"><strong>Local</strong><span>Full Circle Real Estate</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="buy-sell">
+      <div class="container split-cards">
+        <article class="split-card">
+          <p class="eyebrow">Buy</p>
+          <h3>Looking for a home?</h3>
+          <p>From first-time buyers to relocating families, Hannah guides the search with research, negotiation, and clear next steps.</p>
+          <a class="button dark" href="#contact" data-inquiry="Buying a home">Talk to a buyer agent</a>
+        </article>
+        <article class="split-card dark">
+          <p class="eyebrow">Sell</p>
+          <h3>Ready to list?</h3>
+          <p>Pricing strategy, presentation, and consistent communication so your property is positioned clearly through closing.</p>
+          <a class="button primary" href="#contact" data-inquiry="Selling a property">Talk to a seller agent</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tint" id="communities">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Explore</p>
+          <h2>Communities</h2>
+        </div>
+        <div class="communities">
+          <a class="community" href="#contact" data-inquiry="Buying a home"><img src="../assets/area-austin.jpg" alt="" /><span>Austin</span></a>
+          <a class="community" href="#contact" data-inquiry="Buying a home"><img src="../assets/area-cedar.jpg" alt="" /><span>Cedar Park</span></a>
+          <a class="community" href="#contact" data-inquiry="Buying a home"><img src="../assets/area-georgetown.jpg" alt="" /><span>Georgetown</span></a>
+          <a class="community" href="#contact" data-inquiry="Land and acreage"><img src="../assets/area-land.jpg" alt="" /><span>Land &amp; Acreage</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="properties">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Featured</p>
+          <h2>Listings &amp; work</h2>
+        </div>
+        <div class="filter-row">
+          <button class="filter-button active" data-filter="all" type="button">All</button>
+          <button class="filter-button" data-filter="residential" type="button">Residential</button>
+          <button class="filter-button" data-filter="land" type="button">Land</button>
+          <button class="filter-button" data-filter="commercial" type="button">Commercial</button>
+        </div>
+        <div class="property-grid">
+          <article class="property-card feature" data-category="residential">
+            <img src="../assets/806-clearwell/01.jpg" alt="806 Clearwell St" />
+            <span class="property-status">Active</span>
+            <div class="property-overlay">
+              <h3>806 Clearwell St</h3>
+              <p class="property-price">$675,000</p>
+              <div class="property-meta"><span>3 bd</span><span>3 ba</span><span>2,224 sq ft</span><span>Cedar Park</span></div>
+              
+              <button class="property-link" type="button"
+                data-title="806 Clearwell St"
+                data-subtitle="Cedar Park, Texas · Active · MLS# 8687449"
+                data-price="$675,000"
+                data-tour="https://www.propertypanorama.com/instaview/aus/8687449"
+                data-gallery="../assets/806-clearwell"
+                data-gallery-count="54"
+                data-details="Built by Milestone Community Builders in the gated Three Points community. 3 bed, 3 bath, 2,224 sq ft, built 2020. Buyer to independently verify all details.">
+                View details
+              </button>
+            </div>
+          </article>
+          <article class="property-card" data-category="residential">
+            <img src="../assets/1220-calendula.jpg" alt="1220 Calendula" />
+            <span class="property-status" style="background:#fff">Sold</span>
+            <div class="property-overlay">
+              <h3>1220 Calendula Trl</h3>
+              <div class="property-meta"><span>Georgetown</span><span>4 bd</span></div>
+              <button class="property-link" type="button" data-title="1220 Calendula Trl" data-subtitle="Georgetown · Sold" data-details="Highland home in Parkside on the River with oversized lot and three-car garage.">View details</button>
+            </div>
+          </article>
+          <article class="property-card" data-category="land">
+            <img src="../assets/jarrell-land.jpg" alt="Jarrell land" />
+            <span class="property-status">Active</span>
+            <div class="property-overlay">
+              <h3>53.678± Acres</h3>
+              <div class="property-meta"><span>Jarrell</span><span>AG exemption</span></div>
+              <button class="property-link" type="button" data-title="53.678± Acres" data-subtitle="Jarrell · Land" data-details="Two contiguous tracts near Sonterra growth corridor. Verify utilities independently.">View details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint" id="about">
+      <div class="about-band">
+        <img src="../assets/hannah-headshot.jpg" alt="Hannah Mara" />
+        <div class="about-copy">
+          <p class="eyebrow">Meet Hannah</p>
+          <h2>Detail-oriented. Local. Hands-on.</h2>
+          <p>Nearly 30 years in the Austin area, an engineering and computer science background, and ~15 years as a retail business owner — organized research with personal service.</p>
+          <p>Residential · Land · Commercial · Relocation</p>
+          <a class="button primary" href="#contact" style="align-self:flex-start;margin-top:16px">Work with Hannah</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Tell Hannah what you’re planning.</h2>
+          <div class="contact-details">
+            <a href="tel:+15126801171"><span>Call / text</span><strong>512-680-1171</strong></a>
+            <a href="mailto:hannah@fullcircle-realestate.com"><span>Email</span><strong>hannah@fullcircle-realestate.com</strong></a>
+            <div><span>Office</span><strong>Leander, TX · Full Circle Real Estate</strong></div>
+          </div>
+        </div>
+        
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/hannah@fullcircle-realestate.com" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from Hannah Mara website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="form-row">
+            <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Phone<input type="tel" name="phone" autocomplete="tel" /></label>
+          </div>
+          <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          <label>What can Hannah help you with?
+            <select name="inquiry" id="inquiry-select">
+              <option>Buying a home</option>
+              <option>Selling a property</option>
+              <option>Land and acreage</option>
+              <option>Commercial real estate</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="4" placeholder="Goals, area, timing…"></textarea></label>
+          <button class="button primary full" type="submit" id="contact-submit">Send Message</button>
+          <p class="form-note">Hannah typically replies within one business day.</p>
+          <div class="form-success" id="form-success" hidden>
+            <strong>Thank you — your message is on its way.</strong>
+            <p>Call or text <a href="tel:+15126801171">512-680-1171</a>.</p>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <img src="../assets/full-circle-logo-horizontal.png" alt="Full Circle Real Estate" class="footer-logo" width="200" height="60" />
+        <p><strong>Hannah Mara</strong> · REALTOR®<br />512-680-1171 · hannah@fullcircle-realestate.com</p>
+      </div>
+      <div>
+        <p>Full Circle Real Estate<br />15161 Ronald Reagan Blvd, Suite 408<br />Leander, TX 78641</p>
+        <p class="muted">© <span id="year"></span> · Equal Housing Opportunity</p>
+        <p><a href="../versions/">Compare all designs →</a></p>
+      </div>
+    </div>
+  </footer>
+
+  
+  <nav class="mobile-cta-bar" aria-label="Quick contact">
+    <a href="tel:+15126801171">Call</a>
+    <a href="sms:+15126801171">Text</a>
+    <a class="mobile-cta-primary" href="#contact">Schedule</a>
+  </nav>
+
+  
+  <dialog class="property-modal" id="property-modal">
+    <button class="modal-close" type="button" aria-label="Close">×</button>
+    <div class="modal-gallery" id="modal-gallery" hidden>
+      <div class="modal-gallery-main">
+        <button class="modal-gallery-nav prev" type="button" aria-label="Previous">‹</button>
+        <img id="modal-gallery-image" src="" alt="" width="1200" height="800" />
+        <button class="modal-gallery-nav next" type="button" aria-label="Next">›</button>
+        <span class="modal-gallery-count" id="modal-gallery-count"></span>
+      </div>
+      <div class="modal-gallery-thumbs" id="modal-gallery-thumbs" role="tablist"></div>
+    </div>
+    <p class="eyebrow" id="modal-subtitle">Property</p>
+    <h2 id="modal-title">Property</h2>
+    <p class="modal-price" id="modal-price" hidden></p>
+    <p id="modal-details"></p>
+    <div class="modal-actions">
+      <a class="button primary" href="#contact" id="modal-contact">Ask Hannah</a>
+      <a class="button ghost" id="modal-tour" href="#" target="_blank" rel="noopener" hidden>Virtual tour</a>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

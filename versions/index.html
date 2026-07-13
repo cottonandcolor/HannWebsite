@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hannah Mara · Design Versions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink: #111; --accent: #e6b800; --mist: #f5f4f2; --muted: #666; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Manrope, system-ui, sans-serif; color: var(--ink); background: var(--mist); line-height: 1.5; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin: 0 auto; padding: 48px 0 72px; }
+    h1 { font-family: "DM Serif Display", Georgia, serif; font-size: clamp(36px, 5vw, 52px); font-weight: 400; margin: 0 0 10px; }
+    .lead { color: var(--muted); max-width: 54ch; margin-bottom: 28px; }
+    .pick {
+      background: #fff; border: 2px solid var(--accent); padding: 20px 22px; margin-bottom: 28px;
+    }
+    .pick strong { display: block; font-family: "DM Serif Display", Georgia, serif; font-size: 22px; margin: 4px 0 8px; }
+    .pick a { color: var(--ink); font-weight: 700; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    a.card {
+      display: block; background: #fff; border: 1px solid #e4e1db; padding: 22px;
+      text-decoration: none; color: inherit; transition: .2s ease;
+    }
+    a.card:hover { border-color: var(--ink); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.08); }
+    .tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+    a.card h2 { font-family: "DM Serif Display", Georgia, serif; font-size: 24px; font-weight: 400; margin: 0 0 8px; }
+    a.card p { margin: 0; font-size: 14px; color: var(--muted); }
+    .inspire { margin-top: 10px; font-size: 12px; color: #999; }
+    .current { border: 2px solid var(--accent); }
+    footer { margin-top: 40px; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="tag">Hannah Mara · Full Circle Real Estate</p>
+    <h1>Design versions</h1>
+    <p class="lead">Auto mode selected a recommended main site. Alternatives stay available for comparison.</p>
+
+    <div class="pick">
+      <span class="tag">Recommended · live on /</span>
+      <strong>Clean mashup (agent + listings + seller process)</strong>
+      Light Full Circle branding, Meet Hannah first, Clearwell gallery, seller steps, lifestyle, reviews, contact.
+      <div style="margin-top:12px"><a href="../">Open recommended site →</a></div>
+    </div>
+
+    <div class="grid">
+      <a class="card current" href="../">
+        <span class="tag">Live main</span>
+        <h2>Recommended</h2>
+        <p>Clean light system + agent trust + Clearwell gallery + seller process.</p>
+        <p class="inspire">Auto-selected mashup</p>
+      </a>
+      <a class="card" href="../v1/">
+        <span class="tag">v1</span>
+        <h2>Leaders hybrid</h2>
+        <p>Earlier cinematic/search layout snapshot.</p>
+      </a>
+      <a class="card" href="../v2/">
+        <span class="tag">v2</span>
+        <h2>Brokerage home</h2>
+        <p>Buy/Sell panels, communities, stats.</p>
+        <p class="inspire">fullcircle-realestate.com</p>
+      </a>
+      <a class="card" href="../v3/">
+        <span class="tag">v3</span>
+        <h2>Agent profile</h2>
+        <p>Headshot-first magazine profile.</p>
+        <p class="inspire">Compass agent pages</p>
+      </a>
+      <a class="card" href="../v4/">
+        <span class="tag">v4</span>
+        <h2>Exclusive listings</h2>
+        <p>Dark gallery-first portfolio.</p>
+        <p class="inspire">Landy Frost</p>
+      </a>
+      <a class="card" href="../v5/">
+        <span class="tag">v5</span>
+        <h2>Seller process</h2>
+        <p>Numbered seller journey + CMA CTA.</p>
+        <p class="inspire">Urvi Naik</p>
+      </a>
+      <a class="card" href="../v6/">
+        <span class="tag">v6</span>
+        <h2>Direct convert</h2>
+        <p>Form-in-hero conversion page.</p>
+        <p class="inspire">sailesh.realtor</p>
+      </a>
+    </div>
+
+    <footer>
+      Hub: <code>https://yourspacerealty.github.io/HannWebsite/versions/</code>
+    </footer>
+  </div>
+</body>
+</html>
