@@ -114,25 +114,37 @@ document.querySelector('#hero-search')?.addEventListener('submit', (event) => {
   document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
 });
 
-const filterButtons = document.querySelectorAll('.filter-button');
-const propertyCards = document.querySelectorAll('.property-card');
+const modal = document.querySelector('#property-modal');
 
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    filterButtons.forEach(item => item.classList.remove('active'));
-    button.classList.add('active');
-    const filter = button.dataset.filter;
-    propertyCards.forEach(card => {
-      const match =
-        filter === 'all' ||
-        (filter === 'active' && card.dataset.status === 'active') ||
-        (filter !== 'active' && card.dataset.category === filter);
-      card.classList.toggle('hidden', !match);
-    });
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+  const track = carousel.querySelector('.property-track');
+  const prev = carousel.querySelector('.carousel-nav.prev');
+  const next = carousel.querySelector('.carousel-nav.next');
+  if (!track || !prev || !next) return;
+
+  const scrollAmount = () => {
+    const card = track.querySelector('.property-card');
+    const gap = 14;
+    return card ? card.getBoundingClientRect().width + gap : track.clientWidth * 0.8;
+  };
+
+  const updateNav = () => {
+    const maxScroll = track.scrollWidth - track.clientWidth - 2;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= maxScroll;
+  };
+
+  prev.addEventListener('click', () => {
+    track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
   });
+  next.addEventListener('click', () => {
+    track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+  track.addEventListener('scroll', updateNav, { passive: true });
+  window.addEventListener('resize', updateNav);
+  updateNav();
 });
 
-const modal = document.querySelector('#property-modal');
 const modalTitle = document.querySelector('#modal-title');
 const modalSubtitle = document.querySelector('#modal-subtitle');
 const modalDetails = document.querySelector('#modal-details');
