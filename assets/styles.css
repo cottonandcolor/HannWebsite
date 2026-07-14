@@ -895,21 +895,26 @@ ul { margin: 0; padding-left: 1.1em; }
 /* Modern compact listings carousel */
 .listings-carousel {
   display: flex;
+  flex-wrap: nowrap;
   gap: 1.5rem;
+  width: 100%;
+  min-width: 0;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   padding: 1rem 0 2rem 0;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
-.listings-carousel::-webkit-scrollbar {
-  display: none;
-}
-.listings-carousel {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.listings-carousel:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }
 .prop-card {
   flex: 0 0 300px;
+  width: 300px;
+  max-width: 300px;
   scroll-snap-align: start;
   background: #ffffff;
   border-radius: 12px;

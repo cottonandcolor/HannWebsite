@@ -117,14 +117,15 @@ document.querySelector('#hero-search')?.addEventListener('submit', (event) => {
 const modal = document.querySelector('#property-modal');
 
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
-  const track = carousel.querySelector('.property-track');
+  const track = carousel.querySelector('.property-track, .listings-carousel');
   const prev = carousel.querySelector('.carousel-nav.prev');
   const next = carousel.querySelector('.carousel-nav.next');
   if (!track || !prev || !next) return;
 
   const scrollAmount = () => {
-    const card = track.querySelector('.property-card, .review-card');
-    const gap = 14;
+    const card = track.querySelector('.property-card, .review-card, .prop-card');
+    const styles = getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap) || 14;
     return card ? card.getBoundingClientRect().width + gap : track.clientWidth * 0.8;
   };
 
