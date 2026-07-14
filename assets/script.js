@@ -29,6 +29,21 @@ document.querySelectorAll('[data-inquiry]').forEach(el => {
   el.addEventListener('click', () => setInquiry(el.dataset.inquiry));
 });
 
+const inquiryFromHash = {
+  'contact-family-homes': 'Buying a home',
+  'contact-acreage': 'Land and acreage',
+  'contact-new-construction': 'New construction',
+  'contact-commercial': 'Commercial real estate',
+};
+
+const applyHashInquiry = () => {
+  const key = window.location.hash.replace(/^#/, '');
+  if (inquiryFromHash[key]) setInquiry(inquiryFromHash[key]);
+};
+
+window.addEventListener('hashchange', applyHashInquiry);
+applyHashInquiry();
+
 async function submitLeadForm(form, submitBtn, successEl, defaultLabel, subjectPrefix) {
   const data = new FormData(form);
   const payload = Object.fromEntries(data.entries());

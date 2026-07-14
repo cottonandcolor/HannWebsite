@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=carousel2" />
+  <link rel="stylesheet" href="assets/styles.css?v=netcalc1" />
 
   <script type="application/ld+json">
   {
@@ -42,7 +42,9 @@
       { "@type": "City", "name": "Leander", "containedInPlace": { "@type": "State", "name": "Texas" } },
       { "@type": "City", "name": "Round Rock", "containedInPlace": { "@type": "State", "name": "Texas" } },
       { "@type": "City", "name": "Georgetown", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Liberty Hill", "containedInPlace": { "@type": "State", "name": "Texas" } },
       { "@type": "City", "name": "Jarrell", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Taylor", "containedInPlace": { "@type": "State", "name": "Texas" } },
       "Central Texas"
     ],
     "address": {
@@ -126,7 +128,7 @@
       <div class="hero-inner container">
         <div class="hero-copy">
           <h1 class="hero-brand">Hannah Mara</h1>
-          <p class="hero-lead">Analytical precision, data-backed strategy. Leveraging an engineering background and 15 years of local business operations to deliver exceptionally strategic representation for buyers, sellers, and commercial clients across Austin and Central Texas.</p>
+          <p class="hero-lead">Analytical precision, data-backed strategy. Leveraging an engineering and computer science background alongside 15 years of local business operations to deliver exceptionally strategic representation for buyers, sellers, and commercial clients across Austin and Central Texas.</p>
           <div class="hero-cta-pair">
             <a class="button primary" href="#listings">My Listings</a>
             <a class="button ghost-light" href="#valuation">Home Valuation</a>
@@ -147,7 +149,7 @@
         </p>
                 <div class="property-carousel" data-carousel>
           <button class="carousel-nav prev" type="button" aria-label="Previous listings">‹</button>
-          <div class="property-track listings-carousel" tabindex="0" role="list">
+          <div class="listings-carousel" tabindex="0" role="list">
           <article class="prop-card" role="listitem">
             <div class="prop-img-container">
               <img alt="806 Clearwell St, Cedar Park" src="assets/806-clearwell/01.jpg" class="prop-img" width="1024" height="683" loading="eager" />
@@ -276,7 +278,7 @@
         </p>
                 <div class="property-carousel" data-carousel>
           <button class="carousel-nav prev" type="button" aria-label="Previous listings">‹</button>
-          <div class="property-track listings-carousel" tabindex="0" role="list">
+          <div class="listings-carousel" tabindex="0" role="list">
           <article class="prop-card" role="listitem">
             <div class="prop-img-container">
               <img alt="3001 Cedarlawn Cir, Austin" src="assets/3001-cedarlawn/01.jpg" class="prop-img" width="1024" height="683" loading="lazy" />
@@ -548,6 +550,195 @@
       </div>
     </section>
 
+    <section class="seller-net-calc" id="net-proceeds" aria-labelledby="net-proceeds-heading">
+      <div class="container">
+        <div class="stack-heading">
+          <p class="stack-eyebrow">Seller toolbox</p>
+          <h2 id="net-proceeds-heading">Seller Net Proceeds Calculator</h2>
+        </div>
+        <p class="listings-intro">
+          Model commission, closing costs, and presentation strategy in real time —
+          then ask Hannah for a precise local valuation.
+        </p>
+
+        <div class="val-widget-container" id="seller-net-widget">
+          <div class="val-widget-inputs">
+            <div class="val-field">
+              <div class="val-field-head">
+                <label for="val-home-value">Estimated Home Value</label>
+                <output class="val-live-value" id="val-home-value-display" for="val-home-value">$650,000</output>
+              </div>
+              <input
+                type="range"
+                id="val-home-value"
+                name="home_value"
+                min="300000"
+                max="2500000"
+                step="25000"
+                value="650000"
+                aria-valuemin="300000"
+                aria-valuemax="2500000"
+                aria-valuenow="650000"
+              />
+              <div class="val-range-ends" aria-hidden="true">
+                <span>$300k</span>
+                <span>$2.5M</span>
+              </div>
+            </div>
+
+            <div class="val-field">
+              <div class="val-field-head">
+                <label for="val-commission">Commission Rate</label>
+                <output class="val-live-value" id="val-commission-display" for="val-commission">5.0%</output>
+              </div>
+              <input
+                type="range"
+                id="val-commission"
+                name="commission_rate"
+                min="4"
+                max="6"
+                step="0.1"
+                value="5"
+                aria-valuemin="4"
+                aria-valuemax="6"
+                aria-valuenow="5"
+              />
+              <div class="val-range-ends" aria-hidden="true">
+                <span>4.0%</span>
+                <span>6.0%</span>
+              </div>
+            </div>
+
+            <fieldset class="val-tier-fieldset">
+              <legend>Property Presentation Tier</legend>
+              <div class="val-tier-group" role="radiogroup" aria-label="Property Presentation Tier">
+                <label class="val-tier-option">
+                  <input type="radio" name="presentation_tier" value="asis" />
+                  <span>As-Is / Minimum Effort</span>
+                </label>
+                <label class="val-tier-option">
+                  <input type="radio" name="presentation_tier" value="standard" checked />
+                  <span>Standard Professional</span>
+                </label>
+                <label class="val-tier-option">
+                  <input type="radio" name="presentation_tier" value="premium" />
+                  <span>Premium Strategic Prep</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="val-widget-outputs" aria-live="polite">
+            <p class="val-output-label">Estimated Net Proceeds</p>
+            <p class="val-net-figure" id="val-net-proceeds">$0</p>
+
+            <dl class="val-metrics">
+              <div>
+                <dt>Adjusted sale price</dt>
+                <dd id="val-adjusted-price">$650,000</dd>
+              </div>
+              <div>
+                <dt>Commission outflow</dt>
+                <dd id="val-commission-cost">$32,500</dd>
+              </div>
+              <div>
+                <dt>Escrow / title / transfer (1.5%)</dt>
+                <dd id="val-escrow-cost">$9,750</dd>
+              </div>
+              <div>
+                <dt>Projected days on market</dt>
+                <dd id="val-dom">24 days</dd>
+              </div>
+            </dl>
+
+            <div class="val-equity-track" aria-hidden="true">
+              <div class="val-equity-fill" id="val-equity-fill"></div>
+            </div>
+            <p class="val-equity-caption">
+              <span id="val-keep-pct">0%</span> estimated equity retained after fees
+            </p>
+
+            <a class="val-widget-cta" href="#contact" data-inquiry="Selling a property">
+              Request a Precise Local Valuation from Hannah →
+            </a>
+            <p class="val-disclaimer">
+              Illustrative estimate only — not a formal CMA, appraisal, or closing statement.
+              Actual net proceeds vary by contract terms, taxes, and payoff balances.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const root = document.getElementById('seller-net-widget');
+        if (!root) return;
+
+        const homeInput = root.querySelector('#val-home-value');
+        const commissionInput = root.querySelector('#val-commission');
+        const homeDisplay = root.querySelector('#val-home-value-display');
+        const commissionDisplay = root.querySelector('#val-commission-display');
+        const netEl = root.querySelector('#val-net-proceeds');
+        const adjustedEl = root.querySelector('#val-adjusted-price');
+        const commissionCostEl = root.querySelector('#val-commission-cost');
+        const escrowEl = root.querySelector('#val-escrow-cost');
+        const domEl = root.querySelector('#val-dom');
+        const fillEl = root.querySelector('#val-equity-fill');
+        const keepPctEl = root.querySelector('#val-keep-pct');
+
+        const money = (n) =>
+          new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            maximumFractionDigits: 0,
+          }).format(Math.round(n));
+
+        const tierConfig = {
+          asis: { priceFactor: 0.96, days: 55 },
+          standard: { priceFactor: 1, days: 24 },
+          premium: { priceFactor: 1.035, days: 11 },
+        };
+
+        function selectedTier() {
+          const checked = root.querySelector('input[name="presentation_tier"]:checked');
+          return tierConfig[checked ? checked.value : 'standard'];
+        }
+
+        function update() {
+          const homeValue = Number(homeInput.value);
+          const commissionRate = Number(commissionInput.value);
+          const tier = selectedTier();
+
+          const adjustedValue = homeValue * tier.priceFactor;
+          const escrow = homeValue * 0.015;
+          const commissionOutflow = (commissionRate / 100) * homeValue;
+          const net = adjustedValue - escrow - commissionOutflow;
+          const keepPct = adjustedValue > 0 ? Math.max(0, Math.min(100, (net / adjustedValue) * 100)) : 0;
+
+          homeDisplay.textContent = money(homeValue);
+          commissionDisplay.textContent = commissionRate.toFixed(1) + '%';
+          homeInput.setAttribute('aria-valuenow', String(homeValue));
+          commissionInput.setAttribute('aria-valuenow', String(commissionRate));
+
+          adjustedEl.textContent = money(adjustedValue);
+          commissionCostEl.textContent = money(commissionOutflow);
+          escrowEl.textContent = money(escrow);
+          domEl.textContent = tier.days + ' days';
+          netEl.textContent = money(net);
+          keepPctEl.textContent = keepPct.toFixed(1) + '%';
+          fillEl.style.width = keepPct.toFixed(2) + '%';
+        }
+
+        root.querySelectorAll('input[type="range"], input[name="presentation_tier"]').forEach((el) => {
+          el.addEventListener('input', update);
+          el.addEventListener('change', update);
+        });
+
+        update();
+      })();
+    </script>
+
     <section class="about" id="about">
       <div class="about-split">
         <div class="about-photo">
@@ -626,21 +817,21 @@
           <h2>Lifestyle</h2>
         </div>
         <div class="lifestyle-grid">
-          <a class="life-tile" href="#contact" data-inquiry="Buying a home" style="--life-image:url('assets/path-buy.jpg')">
+          <a class="life-tile" href="#contact-family-homes" data-inquiry="Buying a home" style="--life-image:url('assets/path-buy.jpg')">
             <h3>Family Homes</h3>
-            <span>Start a search</span>
+            <span>Start a home search</span>
           </a>
-          <a class="life-tile" href="#contact" data-inquiry="Land and acreage" style="--life-image:url('assets/path-land.jpg')">
+          <a class="life-tile" href="#contact-acreage" data-inquiry="Land and acreage" style="--life-image:url('assets/path-land.jpg')">
             <h3>Acreage &amp; Land</h3>
-            <span>Discuss a tract</span>
+            <span>Schedule an Acreage Consult</span>
           </a>
-          <a class="life-tile" href="#contact" data-inquiry="Buying a home" style="--life-image:url('assets/path-sell.jpg')">
+          <a class="life-tile" href="#contact-new-construction" data-inquiry="New construction" style="--life-image:url('assets/path-sell.jpg')">
             <h3>New Construction</h3>
-            <span>Plan your build</span>
+            <span>Book a New Build Consult</span>
           </a>
-          <a class="life-tile" href="#contact" data-inquiry="Commercial real estate" style="--life-image:url('assets/path-commercial.jpg')">
+          <a class="life-tile" href="#contact-commercial" data-inquiry="Commercial real estate" style="--life-image:url('assets/path-commercial.jpg')">
             <h3>Commercial</h3>
-            <span>Find a space</span>
+            <span>Request Commercial Spaces</span>
           </a>
         </div>
       </div>
@@ -877,6 +1068,10 @@
     </section>
 
     <section class="contact" id="contact">
+      <div id="contact-family-homes" class="contact-intent" tabindex="-1"></div>
+      <div id="contact-acreage" class="contact-intent" tabindex="-1"></div>
+      <div id="contact-new-construction" class="contact-intent" tabindex="-1"></div>
+      <div id="contact-commercial" class="contact-intent" tabindex="-1"></div>
       <div class="container contact-grid">
         <div class="contact-copy">
           <p class="eyebrow">Contact Hannah</p>
@@ -919,6 +1114,7 @@
               <option>Buying a home</option>
               <option>Selling a property</option>
               <option>Land and acreage</option>
+              <option>New construction</option>
               <option>Commercial real estate</option>
               <option>Residential lease</option>
               <option>Other</option>
@@ -997,6 +1193,6 @@
     </div>
   </dialog>
 
-  <script src="assets/script.js?v=carousel2"></script>
+  <script src="assets/script.js?v=optimize1"></script>
 </body>
 </html>
