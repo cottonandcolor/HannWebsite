@@ -864,9 +864,22 @@ ul { margin: 0; padding-left: 1.1em; }
   .hero-inner { padding-top: 100px; }
   .property-carousel { grid-template-columns: 1fr; gap: 8px; }
   .carousel-nav { display: none; }
+  /* Keep listing arrows so horizontal browsing is obvious without a trackpad */
+  .property-carousel:has(.listings-carousel) {
+    grid-template-columns: auto 1fr auto;
+    gap: 8px;
+  }
+  .property-carousel:has(.listings-carousel) .carousel-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
   .property-track {
     grid-auto-columns: minmax(260px, 82vw);
     padding-bottom: 8px;
+  }
+  .property-track.listings-carousel {
+    grid-auto-columns: minmax(260px, 78vw);
   }
   .property-track .property-card { min-height: 300px; height: 300px; }
   .review-carousel .property-track {
@@ -892,30 +905,39 @@ ul { margin: 0; padding-left: 1.1em; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
-/* Modern compact listings carousel */
-.listings-carousel {
-  display: flex;
-  flex-wrap: nowrap;
+/* Compact listing cards rail — same horizontal track engine as reviews */
+.property-track.listings-carousel {
+  grid-auto-columns: 300px;
   gap: 1.5rem;
-  width: 100%;
-  min-width: 0;
+  align-items: stretch;
+  padding: 1rem 0 1.25rem;
   overflow-x: auto;
   overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding: 1rem 0 2rem 0;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-width: auto;
+  scrollbar-color: #bdbdbd #f0f0f0;
 }
-.listings-carousel:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
+.property-track.listings-carousel::-webkit-scrollbar {
+  height: 10px;
+  display: block;
+}
+.property-track.listings-carousel::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 999px;
+}
+.property-track.listings-carousel::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 999px;
+}
+.property-track.listings-carousel::-webkit-scrollbar-thumb:hover {
+  background: #9e9e9e;
 }
 .prop-card {
-  flex: 0 0 300px;
-  width: 300px;
-  max-width: 300px;
   scroll-snap-align: start;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
