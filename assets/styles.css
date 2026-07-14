@@ -1058,6 +1058,14 @@ ul { margin: 0; padding-left: 1.1em; }
   color: #555;
 }
 .spec-item strong { color: #111; }
+.spec-item data {
+  font: inherit;
+  color: inherit;
+}
+.prop-meta data {
+  font: inherit;
+  color: inherit;
+}
 .prop-meta {
   display: flex;
   justify-content: space-between;
