@@ -1001,19 +1001,15 @@ ul { margin: 0; padding-left: 1.1em; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   z-index: 2;
-}
-.status-badge { left: 0.75rem; background: #2e7d32; color: #fff; }
-.status-badge-sold {
-  left: 0.75rem;
-  background: #fff;
-  color: #111;
+  background: #ffffff;
+  color: #111111;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
+.status-badge { left: 0.75rem; }
+.status-badge-sold { left: 0.75rem; }
 .type-badge {
   right: 0.75rem;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  backdrop-filter: blur(4px);
+  backdrop-filter: none;
 }
 .prop-content {
   padding: 1.25rem;
