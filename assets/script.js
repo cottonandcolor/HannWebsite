@@ -52,7 +52,7 @@ async function submitLeadForm(form, submitBtn, successEl, defaultLabel, subjectP
     submitBtn.textContent = 'Sending…';
   }
   try {
-    const response = await fetch('https://formsubmit.co/ajax/yourspcewithhannah@gmail.com', {
+    const response = await fetch('https://formsubmit.co/ajax/yourspacewithhannah@gmail.com', {
       method: 'POST',
       headers: { Accept: 'application/json' },
       body: (() => {
@@ -84,7 +84,7 @@ ${payload.message || ''}
 
 Thank you.`
     );
-    window.location.href = `mailto:yourspcewithhannah@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:yourspacewithhannah@gmail.com?subject=${subject}&body=${body}`;
   } finally {
     if (submitBtn) {
       submitBtn.disabled = false;
@@ -309,7 +309,7 @@ contactForm?.addEventListener('submit', async event => {
   contactSubmit.textContent = 'Sending…';
 
   try {
-    const response = await fetch('https://formsubmit.co/ajax/yourspcewithhannah@gmail.com', {
+    const response = await fetch('https://formsubmit.co/ajax/yourspacewithhannah@gmail.com', {
       method: 'POST',
       headers: { Accept: 'application/json' },
       body: (() => {
@@ -336,7 +336,7 @@ ${payload.message || ''}
 
 Thank you.`
     );
-    window.location.href = `mailto:yourspcewithhannah@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:yourspacewithhannah@gmail.com?subject=${subject}&body=${body}`;
   } finally {
     contactSubmit.disabled = false;
     contactSubmit.textContent = 'Send Message to Hannah';
