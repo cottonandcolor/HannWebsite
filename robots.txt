@@ -16,4 +16,4 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-Sitemap: https://cottonandcolor.github.io/HannWebsite/sitemap.xml
+Sitemap: https://yourspacewithhannah.com/sitemap.xml
