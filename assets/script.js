@@ -44,31 +44,12 @@ const applyHashInquiry = () => {
 window.addEventListener('hashchange', applyHashInquiry);
 applyHashInquiry();
 
-async function submitLeadForm(form, submitBtn, successEl, defaultLabel, subjectPrefix) {
-  const data = new FormData(form);
-  const payload = Object.fromEntries(data.entries());
-  if (submitBtn) {
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-  }
-  try {
-    const response = await fetch('https://formsubmit.co/ajax/yourspacewithhannah@gmail.com', {
-      method: 'POST',
-      headers: { Accept: 'application/json' },
-      body: (() => {
-        const body = new FormData();
-        Object.entries(payload).forEach(([key, value]) => body.append(key, value));
-        body.append('_subject', `${subjectPrefix}: ${payload.name || ''} — ${payload.address || payload.area || payload.inquiry || ''}`);
-        return body;
-      })()
-    });
-    if (!response.ok) throw new Error('Form submission failed');
-    form.classList.add('is-success');
-    if (successEl) successEl.hidden = false;
-    form.reset();
-  } catch (error) {
-    const subject = encodeURIComponent(`${subjectPrefix} — ${payload.name || ''}`);
-    const body = encodeURIComponent(
+const FORM_ENDPOINT = () => (window.HANNAH_FORM_ENDPOINT || '').trim();
+const CONTACT_EMAIL = 'yourspacewithhannah@gmail.com';
+
+function mailtoFallback(subjectPrefix, payload) {
+  const subject = encodeURIComponent(`${subjectPrefix} — ${payload.name || ''}`);
+  const body = encodeURIComponent(
 `Hi Hannah,
 
 My name is ${payload.name || ''}.
@@ -83,8 +64,40 @@ Beds: ${payload.beds || ''} Baths: ${payload.baths || ''} Max price: ${payload.m
 ${payload.message || ''}
 
 Thank you.`
-    );
-    window.location.href = `mailto:yourspacewithhannah@gmail.com?subject=${subject}&body=${body}`;
+  );
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+}
+
+async function postToGoogleScript(payload) {
+  const endpoint = FORM_ENDPOINT();
+  if (!endpoint) throw new Error('Form endpoint not configured');
+
+  // text/plain + no-cors avoids Google Apps Script CORS/redirect issues from static sites
+  await fetch(endpoint, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify(payload),
+  });
+}
+
+async function submitLeadForm(form, submitBtn, successEl, defaultLabel, subjectPrefix, formType) {
+  const data = new FormData(form);
+  const payload = Object.fromEntries(data.entries());
+  payload.formType = formType || subjectPrefix;
+  payload._subject = `${subjectPrefix}: ${payload.name || ''} — ${payload.address || payload.area || payload.inquiry || ''}`;
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+  }
+  try {
+    await postToGoogleScript(payload);
+    form.classList.add('is-success');
+    if (successEl) successEl.hidden = false;
+    form.reset();
+  } catch (error) {
+    mailtoFallback(subjectPrefix, payload);
   } finally {
     if (submitBtn) {
       submitBtn.disabled = false;
@@ -99,8 +112,9 @@ document.querySelector('#home-search-form')?.addEventListener('submit', async (e
     event.currentTarget,
     document.querySelector('#search-submit'),
     document.querySelector('#search-success'),
-    'Send search request',
-    'Home Search request'
+    'Ask Hannah to search',
+    'Home Search request',
+    'buyer-help'
   );
 });
 
@@ -111,7 +125,8 @@ document.querySelector('#valuation-form')?.addEventListener('submit', async (eve
     document.querySelector('#valuation-submit'),
     document.querySelector('#valuation-success'),
     'Get my home valuation',
-    'Home Valuation request'
+    'Home Valuation request',
+    'valuation'
   );
 });
 
@@ -304,39 +319,18 @@ contactForm?.addEventListener('submit', async event => {
   const form = event.currentTarget;
   const data = new FormData(form);
   const payload = Object.fromEntries(data.entries());
+  payload.formType = 'contact';
+  payload._subject = `Website inquiry: ${payload.inquiry || 'General'} — ${payload.name || ''}`;
 
   contactSubmit.disabled = true;
   contactSubmit.textContent = 'Sending…';
 
   try {
-    const response = await fetch('https://formsubmit.co/ajax/yourspacewithhannah@gmail.com', {
-      method: 'POST',
-      headers: { Accept: 'application/json' },
-      body: (() => {
-        const body = new FormData();
-        Object.entries(payload).forEach(([key, value]) => body.append(key, value));
-        body.append('_subject', `Website inquiry: ${payload.inquiry || 'General'} — ${payload.name || ''}`);
-        return body;
-      })()
-    });
-    if (!response.ok) throw new Error('Form submission failed');
+    await postToGoogleScript(payload);
     showFormSuccess();
     form.reset();
   } catch (error) {
-    const subject = encodeURIComponent(`${payload.inquiry || 'Inquiry'} — ${payload.name || ''}`);
-    const body = encodeURIComponent(
-`Hi Hannah,
-
-My name is ${payload.name || ''}.
-Phone: ${payload.phone || ''}
-Email: ${payload.email || ''}
-Inquiry: ${payload.inquiry || ''}
-
-${payload.message || ''}
-
-Thank you.`
-    );
-    window.location.href = `mailto:yourspacewithhannah@gmail.com?subject=${subject}&body=${body}`;
+    mailtoFallback(payload.inquiry || 'Inquiry', payload);
   } finally {
     contactSubmit.disabled = false;
     contactSubmit.textContent = 'Send Message to Hannah';

@@ -708,7 +708,7 @@
             and she’ll send curated options from the market.
           </p>
         </div>
-        <form class="tool-form" id="home-search-form" action="https://formsubmit.co/yourspacewithhannah@gmail.com" method="POST">
+        <form class="tool-form" id="home-search-form" action="#" method="POST">
           <input type="hidden" name="_subject" value="Buyer help request — Hannah Mara website" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
@@ -774,7 +774,7 @@
             Hannah prepares local comps and follows up personally.
           </p>
         </div>
-        <form class="tool-form valuation-form" id="valuation-form" action="https://formsubmit.co/yourspacewithhannah@gmail.com" method="POST">
+        <form class="tool-form valuation-form" id="valuation-form" action="#" method="POST">
           <input type="hidden" name="_subject" value="Home Valuation request — Hannah Mara website" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
@@ -1355,7 +1355,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contact-form" action="https://formsubmit.co/yourspacewithhannah@gmail.com" method="POST">
+        <form class="contact-form" id="contact-form" action="#" method="POST">
           <input type="hidden" name="_subject" value="New inquiry from Hannah Mara website" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
@@ -1460,6 +1460,11 @@
     </div>
   </dialog>
 
-  <script src="assets/script.js?v=email2"></script>
+  <script>
+    // Paste your Google Apps Script Web App URL here after deploy:
+    // Deploy → New deployment → Web app → Who has access: Anyone
+    window.HANNAH_FORM_ENDPOINT = "";
+  </script>
+  <script src="assets/script.js?v=gas1"></script>
 </body>
 </html>
