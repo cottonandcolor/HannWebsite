@@ -35,7 +35,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=hero10" />
+  <link rel="stylesheet" href="assets/styles.css?v=hero11" />
 
   <script type="application/ld+json">
   {
@@ -133,11 +133,7 @@
   <header class="site-header over-hero" id="top">
     <nav class="nav container" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Hannah Mara home">
-        <img class="brand-mark" src="assets/logo-house.svg" alt="" width="44" height="44" />
-        <span class="brand-copy">
-          <strong>Hannah Mara</strong>
-          <small>REALTOR® · Full Circle RE</small>
-        </span>
+        <img src="assets/full-circle-logo-horizontal.png" alt="Full Circle Real Estate" width="1024" height="181" />
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
@@ -150,7 +146,7 @@
         <a href="#sell">Home Value</a>
         <a href="#reviews">Reviews</a>
         <a href="#about">About</a>
-        <a href="#sell">Sellers</a>
+        <a href="#net-proceeds">Sellers</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </div>
     </nav>
@@ -789,194 +785,43 @@
       </div>
     </section>
 
-    <section class="seller-net-calc" id="net-proceeds" aria-labelledby="net-proceeds-heading">
+    <section class="seller-net-calc seller-net-teaser" id="net-proceeds" aria-labelledby="net-proceeds-heading">
       <div class="container">
         <div class="stack-heading">
           <p class="stack-eyebrow">Seller toolbox</p>
           <h2 id="net-proceeds-heading">Seller Net Proceeds Calculator</h2>
         </div>
         <p class="listings-intro">
-          Model commission, closing costs, and presentation strategy in real time —
-          then ask Hannah for a precise local valuation.
+          See a preliminary breakdown of costs associated with selling your Texas home —
+          mortgage payoff, broker compensation, title, taxes, and negotiated expenses —
+          then request a personalized net sheet from Hannah.
         </p>
-
-        <div class="val-widget-container" id="seller-net-widget">
-          <div class="val-widget-inputs">
-            <div class="val-field">
-              <div class="val-field-head">
-                <label for="val-home-value">Estimated Home Value</label>
-                <output class="val-live-value" id="val-home-value-display" for="val-home-value">$650,000</output>
-              </div>
-              <input
-                type="range"
-                id="val-home-value"
-                name="home_value"
-                min="300000"
-                max="2500000"
-                step="25000"
-                value="650000"
-                aria-valuemin="300000"
-                aria-valuemax="2500000"
-                aria-valuenow="650000"
-              />
-              <div class="val-range-ends" aria-hidden="true">
-                <span>$300k</span>
-                <span>$2.5M</span>
-              </div>
+        <div class="seller-net-teaser-grid">
+          <div class="seller-net-teaser-copy">
+            <ul class="seller-net-teaser-points">
+              <li>Live calculations as you enter details</li>
+              <li>Texas title-policy estimate (TDI basic premium)</li>
+              <li>Three sale-price scenarios side by side</li>
+              <li>Print or download a planning report</li>
+            </ul>
+            <div class="seller-net-teaser-actions">
+              <a class="button" href="seller-net-proceeds.html">Open Full Calculator</a>
+              <a class="button dark" href="#contact" data-inquiry="Selling a property">Talk With Hannah First</a>
             </div>
-
-            <div class="val-field">
-              <div class="val-field-head">
-                <label for="val-commission">Commission Rate</label>
-                <output class="val-live-value" id="val-commission-display" for="val-commission">5.0%</output>
-              </div>
-              <input
-                type="range"
-                id="val-commission"
-                name="commission_rate"
-                min="4"
-                max="6"
-                step="0.1"
-                value="5"
-                aria-valuemin="4"
-                aria-valuemax="6"
-                aria-valuenow="5"
-              />
-              <div class="val-range-ends" aria-hidden="true">
-                <span>4.0%</span>
-                <span>6.0%</span>
-              </div>
-            </div>
-
-            <fieldset class="val-tier-fieldset">
-              <legend>Property Presentation Tier</legend>
-              <div class="val-tier-group" role="radiogroup" aria-label="Property Presentation Tier">
-                <label class="val-tier-option">
-                  <input type="radio" name="presentation_tier" value="asis" />
-                  <span>As-Is / Minimum Effort</span>
-                </label>
-                <label class="val-tier-option">
-                  <input type="radio" name="presentation_tier" value="standard" checked />
-                  <span>Standard Professional</span>
-                </label>
-                <label class="val-tier-option">
-                  <input type="radio" name="presentation_tier" value="premium" />
-                  <span>Premium Strategic Prep</span>
-                </label>
-              </div>
-            </fieldset>
-          </div>
-
-          <div class="val-widget-outputs" aria-live="polite">
-            <p class="val-output-label">Estimated Net Proceeds</p>
-            <p class="val-net-figure" id="val-net-proceeds">$0</p>
-
-            <dl class="val-metrics">
-              <div>
-                <dt>Adjusted sale price</dt>
-                <dd id="val-adjusted-price">$650,000</dd>
-              </div>
-              <div>
-                <dt>Commission outflow</dt>
-                <dd id="val-commission-cost">$32,500</dd>
-              </div>
-              <div>
-                <dt>Escrow / title / transfer (1.5%)</dt>
-                <dd id="val-escrow-cost">$9,750</dd>
-              </div>
-              <div>
-                <dt>Projected days on market</dt>
-                <dd id="val-dom">24 days</dd>
-              </div>
-            </dl>
-
-            <div class="val-equity-track" aria-hidden="true">
-              <div class="val-equity-fill" id="val-equity-fill"></div>
-            </div>
-            <p class="val-equity-caption">
-              <span id="val-keep-pct">0%</span> estimated equity retained after fees
-            </p>
-
-            <a class="val-widget-cta" href="#contact" data-inquiry="Selling a property">
-              Request a Precise Local Valuation from Hannah →
-            </a>
             <p class="val-disclaimer">
-              Illustrative estimate only — not a formal CMA, appraisal, or closing statement.
-              Actual net proceeds vary by contract terms, taxes, and payoff balances.
+              Educational planning estimate only — not a settlement statement or guarantee.
+              Broker compensation is not set by law and is fully negotiable.
             </p>
           </div>
+          <aside class="seller-net-teaser-card" aria-hidden="true">
+            <p class="seller-net-teaser-label">Sample estimate</p>
+            <p class="seller-net-teaser-net">$499,220</p>
+            <p class="seller-net-teaser-sub">on a $500,000 sale with typical Texas title estimate</p>
+            <p class="seller-net-teaser-note">Your numbers update live on the full calculator.</p>
+          </aside>
         </div>
       </div>
     </section>
-
-    <script>
-      (function () {
-        const root = document.getElementById('seller-net-widget');
-        if (!root) return;
-
-        const homeInput = root.querySelector('#val-home-value');
-        const commissionInput = root.querySelector('#val-commission');
-        const homeDisplay = root.querySelector('#val-home-value-display');
-        const commissionDisplay = root.querySelector('#val-commission-display');
-        const netEl = root.querySelector('#val-net-proceeds');
-        const adjustedEl = root.querySelector('#val-adjusted-price');
-        const commissionCostEl = root.querySelector('#val-commission-cost');
-        const escrowEl = root.querySelector('#val-escrow-cost');
-        const domEl = root.querySelector('#val-dom');
-        const fillEl = root.querySelector('#val-equity-fill');
-        const keepPctEl = root.querySelector('#val-keep-pct');
-
-        const money = (n) =>
-          new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-            maximumFractionDigits: 0,
-          }).format(Math.round(n));
-
-        const tierConfig = {
-          asis: { priceFactor: 0.96, days: 55 },
-          standard: { priceFactor: 1, days: 24 },
-          premium: { priceFactor: 1.035, days: 11 },
-        };
-
-        function selectedTier() {
-          const checked = root.querySelector('input[name="presentation_tier"]:checked');
-          return tierConfig[checked ? checked.value : 'standard'];
-        }
-
-        function update() {
-          const homeValue = Number(homeInput.value);
-          const commissionRate = Number(commissionInput.value);
-          const tier = selectedTier();
-
-          const adjustedValue = homeValue * tier.priceFactor;
-          const escrow = homeValue * 0.015;
-          const commissionOutflow = (commissionRate / 100) * homeValue;
-          const net = adjustedValue - escrow - commissionOutflow;
-          const keepPct = adjustedValue > 0 ? Math.max(0, Math.min(100, (net / adjustedValue) * 100)) : 0;
-
-          homeDisplay.textContent = money(homeValue);
-          commissionDisplay.textContent = commissionRate.toFixed(1) + '%';
-          homeInput.setAttribute('aria-valuenow', String(homeValue));
-          commissionInput.setAttribute('aria-valuenow', String(commissionRate));
-
-          adjustedEl.textContent = money(adjustedValue);
-          commissionCostEl.textContent = money(commissionOutflow);
-          escrowEl.textContent = money(escrow);
-          domEl.textContent = tier.days + ' days';
-          netEl.textContent = money(net);
-          keepPctEl.textContent = keepPct.toFixed(1) + '%';
-          fillEl.style.width = keepPct.toFixed(2) + '%';
-        }
-
-        root.querySelectorAll('input[type="range"], input[name="presentation_tier"]').forEach((el) => {
-          el.addEventListener('input', update);
-          el.addEventListener('change', update);
-        });
-
-        update();
-      })();
-    </script>
 
     <section class="about" id="about">
       <div class="about-split">

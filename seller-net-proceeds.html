@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estimate seller net proceeds for a Texas home sale with Hannah Mara, REALTOR® at Full Circle Real Estate. Live calculator with Texas title-policy estimates and sale-price scenarios." />
+  <meta name="theme-color" content="#171714" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourspacewithhannah.com/seller-net-proceeds.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourspacewithhannah.com/seller-net-proceeds.html" />
+  <meta property="og:title" content="Seller Net Proceeds Calculator | Hannah Mara" />
+  <meta property="og:description" content="See a preliminary breakdown of Texas home-sale costs and estimated net proceeds at closing." />
+  <meta property="og:image" content="https://yourspacewithhannah.com/assets/hannah-headshot.jpg" />
+  <title>Seller Net Proceeds Calculator | Hannah Mara</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180" />
+  <link rel="stylesheet" href="assets/seller-net-proceeds.css?v=1" />
+</head>
+<body>
+  <a class="skip-link" href="#calculator">Skip to calculator</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="https://yourspacewithhannah.com/" aria-label="Return to Hannah Mara's website">
+        <img src="assets/full-circle-logo-horizontal.png" width="215" height="62" alt="Full Circle Real Estate" />
+      </a>
+      <div class="nav-actions">
+        <a href="https://yourspacewithhannah.com/">Home</a>
+        <a href="#education">Seller Resources</a>
+        <a class="nav-button" href="#calculator">Start Estimate</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-orb" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Seller Resources</p>
+          <h1>Estimate Your Seller Net Proceeds</h1>
+          <p class="hero-lead">
+            See a preliminary breakdown of the costs associated with selling your Texas home
+            and how much you may receive at closing.
+          </p>
+          <div class="hero-points">
+            <span>Live calculations</span>
+            <span>Texas title-policy estimate</span>
+            <span>Three sale-price scenarios</span>
+          </div>
+        </div>
+        <aside class="hero-note">
+          <span class="note-label">Planning estimate</span>
+          <p>
+            Actual costs depend on the property, contract terms, negotiated compensation,
+            mortgage payoff, title-company charges and closing date.
+          </p>
+          <a href="#calculator">Begin your estimate <span aria-hidden="true">↓</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-inner">
+        <strong>Hannah Mara, REALTOR®</strong>
+        <span>Residential · Land · Commercial Real Estate</span>
+        <span>Austin &amp; Central Texas</span>
+      </div>
+    </section>
+
+    <section class="calculator-section" id="calculator">
+      <div class="container calculator-layout">
+        <form class="calculator-form" id="calculator-form" novalidate>
+          <div class="form-intro">
+            <div>
+              <p class="eyebrow">Your Estimate</p>
+              <h2>Enter the details you know.</h2>
+            </div>
+            <p>
+              All fields marked optional may be left at zero. Values are saved only in this browser
+              so you can return to the estimate later.
+            </p>
+          </div>
+
+          <details class="form-section" open>
+            <summary>
+              <span class="step">01</span>
+              <span>
+                <strong>Property and sale information</strong>
+                <small>Start with the anticipated sale price and closing date.</small>
+              </span>
+            </summary>
+            <div class="section-body">
+              <label class="field field-wide">
+                <span>Property address <em>Optional</em></span>
+                <input id="propertyAddress" name="propertyAddress" type="text" placeholder="123 Main Street, Austin, TX" autocomplete="street-address" />
+              </label>
+              <div class="field-grid">
+                <label class="field">
+                  <span>Expected sale price</span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="salePrice" name="salePrice" inputmode="decimal" value="500,000" data-money required />
+                  </div>
+                </label>
+                <label class="field">
+                  <span>Estimated closing date</span>
+                  <input id="closingDate" name="closingDate" type="date" />
+                  <small>The date may affect estimated tax prorations.</small>
+                </label>
+              </div>
+            </div>
+          </details>
+
+          <details class="form-section" open>
+            <summary>
+              <span class="step">02</span>
+              <span>
+                <strong>Loans and liens</strong>
+                <small>Use lender payoff estimates rather than statement balances when available.</small>
+              </span>
+            </summary>
+            <div class="section-body">
+              <div class="field-grid">
+                <label class="field">
+                  <span>Estimated mortgage payoff</span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="mortgagePayoff" name="mortgagePayoff" inputmode="decimal" value="0" data-money />
+                  </div>
+                  <small>A payoff quote may include interest and lender fees.</small>
+                </label>
+                <label class="field">
+                  <span>Second mortgage, HELOC or other lien <em>Optional</em></span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="secondLien" name="secondLien" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+              </div>
+            </div>
+          </details>
+
+          <details class="form-section" open>
+            <summary>
+              <span class="step">03</span>
+              <span>
+                <strong>Broker compensation</strong>
+                <small>Enter only the amounts applicable to your anticipated agreement or offer.</small>
+              </span>
+            </summary>
+            <div class="section-body">
+              <div class="negotiable-note">
+                Broker compensation is not set by law and is fully negotiable.
+              </div>
+              <div class="compound-field">
+                <div>
+                  <label for="listingCompValue">Listing broker compensation</label>
+                  <small>Enter a percentage or flat amount.</small>
+                </div>
+                <div class="compound-controls">
+                  <select id="listingCompMode" aria-label="Listing compensation calculation type">
+                    <option value="percent">Percentage</option>
+                    <option value="flat">Flat amount</option>
+                  </select>
+                  <div class="value-with-suffix">
+                    <input id="listingCompValue" inputmode="decimal" value="0" />
+                    <span id="listingCompSuffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="compound-field">
+                <div>
+                  <label for="buyerCompValue">Buyer broker compensation or seller contribution</label>
+                  <small>Select none when it is not part of the anticipated transaction.</small>
+                </div>
+                <div class="compound-controls">
+                  <select id="buyerCompMode" aria-label="Buyer compensation calculation type">
+                    <option value="none">None</option>
+                    <option value="percent">Percentage</option>
+                    <option value="flat">Flat amount</option>
+                  </select>
+                  <div class="value-with-suffix">
+                    <input id="buyerCompValue" inputmode="decimal" value="0" disabled />
+                    <span id="buyerCompSuffix">—</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <details class="form-section">
+            <summary>
+              <span class="step">04</span>
+              <span>
+                <strong>Title, settlement and prorations</strong>
+                <small>Use the automatic Texas title estimate or enter a custom amount.</small>
+              </span>
+            </summary>
+            <div class="section-body">
+              <div class="compound-field">
+                <div>
+                  <label for="titleMode">Owner's title policy</label>
+                  <small>The contract determines who pays. Automatic mode estimates the Texas basic premium.</small>
+                </div>
+                <div class="compound-controls">
+                  <select id="titleMode">
+                    <option value="auto">Estimate automatically</option>
+                    <option value="custom">Enter custom amount</option>
+                    <option value="none">Seller is not paying</option>
+                  </select>
+                  <div class="money-input compact">
+                    <span>$</span>
+                    <input id="titleCustom" inputmode="decimal" value="0" data-money disabled />
+                  </div>
+                </div>
+              </div>
+              <div class="field-grid">
+                <label class="field">
+                  <span>Escrow, title and settlement fees</span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="escrowFees" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+                <label class="field">
+                  <span>Survey <em>Optional</em></span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="surveyCost" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+                <label class="field">
+                  <span>Home warranty <em>Optional</em></span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="homeWarranty" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+                <label class="field">
+                  <span>HOA resale, transfer and related fees <em>Optional</em></span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="hoaFees" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+              </div>
+              <div class="tax-panel">
+                <div class="tax-heading">
+                  <div>
+                    <strong>Prorated property taxes</strong>
+                    <small>Estimate from annual taxes and closing date, or enter the amount manually.</small>
+                  </div>
+                  <select id="taxMode">
+                    <option value="estimate">Estimate</option>
+                    <option value="manual">Enter manually</option>
+                  </select>
+                </div>
+                <div class="field-grid">
+                  <label class="field" id="annualTaxesWrap">
+                    <span>Estimated annual property taxes</span>
+                    <div class="money-input">
+                      <span>$</span>
+                      <input id="annualTaxes" inputmode="decimal" value="0" data-money />
+                    </div>
+                  </label>
+                  <label class="field hidden" id="manualTaxesWrap">
+                    <span>Estimated tax proration</span>
+                    <div class="money-input">
+                      <span>$</span>
+                      <input id="manualTaxes" inputmode="decimal" value="0" data-money />
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <label class="field field-wide">
+                <span>Other title, recording or administrative fees <em>Optional</em></span>
+                <div class="money-input">
+                  <span>$</span>
+                  <input id="adminFees" inputmode="decimal" value="0" data-money />
+                </div>
+              </label>
+            </div>
+          </details>
+
+          <details class="form-section">
+            <summary>
+              <span class="step">05</span>
+              <span>
+                <strong>Negotiated seller expenses</strong>
+                <small>Include credits, repairs and preparation costs only once.</small>
+              </span>
+            </summary>
+            <div class="section-body">
+              <div class="compound-field">
+                <div>
+                  <label for="sellerContributionValue">Seller-paid buyer closing-cost contribution</label>
+                  <small>Enter a percentage, flat amount or none.</small>
+                </div>
+                <div class="compound-controls">
+                  <select id="sellerContributionMode">
+                    <option value="none">None</option>
+                    <option value="percent">Percentage</option>
+                    <option value="flat">Flat amount</option>
+                  </select>
+                  <div class="value-with-suffix">
+                    <input id="sellerContributionValue" inputmode="decimal" value="0" disabled />
+                    <span id="sellerContributionSuffix">—</span>
+                  </div>
+                </div>
+              </div>
+              <div class="field-grid">
+                <label class="field">
+                  <span>Repair allowance or repair credit</span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="repairCredit" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+                <label class="field">
+                  <span>Seller-paid improvements or repairs</span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="preClosingRepairs" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+                <label class="field">
+                  <span>Moving, staging, cleaning or preparation</span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="prepExpenses" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+                <label class="field">
+                  <span>Other seller expenses</span>
+                  <div class="money-input">
+                    <span>$</span>
+                    <input id="otherExpenses" inputmode="decimal" value="0" data-money />
+                  </div>
+                </label>
+              </div>
+              <label class="field field-wide">
+                <span>Description of other expense <em>Optional</em></span>
+                <input id="otherDescription" type="text" placeholder="Example: estate-sale removal or special assessment" />
+              </label>
+            </div>
+          </details>
+        </form>
+
+        <aside class="results-column" aria-live="polite">
+          <div class="results-card">
+            <div class="result-topline">
+              <span>Live estimate</span>
+              <span id="resultDate"></span>
+            </div>
+            <p class="result-label">Estimated Net Proceeds</p>
+            <div class="net-result" id="netResult">$499,220</div>
+            <div class="net-percent" id="netPercent">99.8% of expected sale price</div>
+            <div class="stacked-bar" aria-label="Estimated distribution of sale proceeds">
+              <span class="segment net" id="chartNet" title="Estimated net proceeds"></span>
+              <span class="segment payoff" id="chartPayoff" title="Loan and lien payoff"></span>
+              <span class="segment broker" id="chartBroker" title="Broker compensation"></span>
+              <span class="segment closing" id="chartClosing" title="Closing costs"></span>
+              <span class="segment other" id="chartOther" title="Other expenses"></span>
+            </div>
+            <div class="chart-legend">
+              <span><i class="net"></i>Net proceeds</span>
+              <span><i class="payoff"></i>Payoff</span>
+              <span><i class="broker"></i>Broker</span>
+              <span><i class="closing"></i>Closing</span>
+              <span><i class="other"></i>Other</span>
+            </div>
+            <div class="breakdown" id="breakdown">
+              <div><span>Expected sale price</span><strong id="salePriceResult">$500,000</strong></div>
+              <div><span>Loan and lien payoff</span><strong id="payoffResult">− $0</strong></div>
+              <div><span>Broker compensation</span><strong id="brokerResult">− $0</strong></div>
+              <div><span>Title and settlement costs</span><strong id="closingResult">− $780</strong></div>
+              <div><span>Tax and HOA prorations</span><strong id="prorationResult">− $0</strong></div>
+              <div><span>Credits, repairs and other expenses</span><strong id="otherResult">− $0</strong></div>
+              <div class="total-line"><span>Total estimated deductions</span><strong id="deductionsResult">− $780</strong></div>
+            </div>
+            <div class="result-actions">
+              <button class="button primary" type="button" id="personalizedButton">Get a Personalized Net Sheet</button>
+              <div class="secondary-actions">
+                <button type="button" id="printButton">Print Estimate</button>
+                <button type="button" id="pdfButton">Download PDF</button>
+                <button type="button" id="resetButton">Reset</button>
+              </div>
+            </div>
+            <p class="result-disclaimer">
+              This is an educational planning estimate, not a settlement statement or guarantee.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="scenario-section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Scenario Comparison</p>
+            <h2>Compare three potential sale prices.</h2>
+          </div>
+          <p>
+            Percentage-based expenses and the automatic title estimate adjust with each price.
+            Fixed-dollar expenses remain the same.
+          </p>
+        </div>
+        <div class="scenario-grid">
+          <article class="scenario-card">
+            <span class="scenario-tag">Conservative</span>
+            <label>
+              Sale price
+              <div class="money-input">
+                <span>$</span>
+                <input id="scenarioLow" inputmode="decimal" data-money />
+              </div>
+            </label>
+            <div class="scenario-result" id="scenarioLowResult">$0</div>
+            <small>Estimated net proceeds</small>
+          </article>
+          <article class="scenario-card expected">
+            <span class="scenario-tag">Expected</span>
+            <label>
+              Sale price
+              <div class="money-input">
+                <span>$</span>
+                <input id="scenarioExpected" inputmode="decimal" data-money />
+              </div>
+            </label>
+            <div class="scenario-result" id="scenarioExpectedResult">$0</div>
+            <small>Estimated net proceeds</small>
+          </article>
+          <article class="scenario-card">
+            <span class="scenario-tag">Strong offer</span>
+            <label>
+              Sale price
+              <div class="money-input">
+                <span>$</span>
+                <input id="scenarioHigh" inputmode="decimal" data-money />
+              </div>
+            </label>
+            <div class="scenario-result" id="scenarioHighResult">$0</div>
+            <small>Estimated net proceeds</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Understanding the Estimate</p>
+            <h2>What can reduce your seller proceeds?</h2>
+          </div>
+          <p>
+            Your final settlement statement reflects the actual contract, payoff statements,
+            prorations and title-company charges.
+          </p>
+        </div>
+        <div class="education-grid">
+          <article><span>01</span><h3>Mortgage and lien payoff</h3><p>Your lender’s payoff may include accrued interest, release fees and other charges beyond the principal balance.</p></article>
+          <article><span>02</span><h3>Broker compensation</h3><p>Compensation is negotiated in written agreements and should be entered based on the terms being considered.</p></article>
+          <article><span>03</span><h3>Title and settlement charges</h3><p>The contract determines who pays the owner’s title policy and other settlement expenses.</p></article>
+          <article><span>04</span><h3>Tax and HOA prorations</h3><p>Property taxes, assessments and HOA charges may be prorated or collected at closing.</p></article>
+          <article><span>05</span><h3>Buyer closing-cost contributions</h3><p>A seller may agree to contribute toward eligible buyer costs as part of the negotiated contract.</p></article>
+          <article><span>06</span><h3>Repairs and other expenses</h3><p>Repair credits, improvements, moving, staging and other transaction-specific costs may affect the final result.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-card">
+        <div class="cta-photo">
+          <img src="assets/hannah-headshot.jpg" width="245" height="265" alt="Hannah Mara, REALTOR®" />
+        </div>
+        <div class="cta-copy">
+          <p class="eyebrow">Want a More Accurate Estimate?</p>
+          <h2>Request a personalized seller net sheet.</h2>
+          <p>
+            An online calculator is useful for early planning. Hannah can prepare a more personalized
+            estimate using your property, likely sale price, anticipated payoff and transaction details.
+          </p>
+          <button class="button primary" type="button" id="ctaPersonalizedButton">Request a Seller Consultation</button>
+        </div>
+        <div class="cta-contact">
+          <span>Hannah Mara, REALTOR®</span>
+          <a href="tel:+15126801171">512-680-1171</a>
+          <a href="mailto:hannah@fullcircle-realestate.com">hannah@fullcircle-realestate.com</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-section">
+      <div class="container legal-card">
+        <h2>Important Estimate Information</h2>
+        <p>
+          This calculator is provided for general educational and planning purposes only. It is not a
+          settlement statement, appraisal, comparative market analysis, mortgage payoff quote, tax
+          calculation or guarantee of proceeds. Actual costs and proceeds will depend on the sales
+          contract, negotiated broker compensation, lender payoff, title-company charges, property-tax
+          and HOA prorations, repairs, concessions and other transaction-specific expenses. Consult the
+          appropriate real estate, title, lending, tax and legal professionals before relying on an estimate.
+        </p>
+        <p><strong>Broker compensation is not set by law and is fully negotiable.</strong></p>
+        <p class="source-note">
+          Automatic owner’s title-policy estimates use the Texas Department of Insurance basic premium
+          rate schedule effective March 1, 2026. Verify the final premium and applicable credits with the title company.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <a href="https://yourspacewithhannah.com/">
+        <img src="assets/full-circle-logo-horizontal.png" width="230" height="66" alt="Full Circle Real Estate" />
+      </a>
+      <div>
+        <strong>Hannah Mara, REALTOR®</strong>
+        <a href="tel:+15126801171">512-680-1171</a>
+        <a href="mailto:hannah@fullcircle-realestate.com">hannah@fullcircle-realestate.com</a>
+      </div>
+      <div>
+        <strong>Full Circle Real Estate</strong>
+        <span>15161 Ronald Reagan Blvd, Suite 408</span>
+        <span>Leander, TX 78641</span>
+        <span>Brokerage: 512-375-3245</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Hannah Mara. All rights reserved.</span>
+      <span>Equal Housing Opportunity · Information deemed reliable but not guaranteed.</span>
+    </div>
+  </footer>
+
+  <dialog id="leadDialog" class="lead-dialog">
+    <button type="button" class="dialog-close" id="dialogClose" aria-label="Close">×</button>
+    <p class="eyebrow">Personalized Seller Net Sheet</p>
+    <h2>Tell Hannah where to send your estimate.</h2>
+    <p class="dialog-intro">
+      Your calculator results remain visible without submitting this form. Submit only when you would
+      like Hannah to contact you.
+    </p>
+    <form id="leadForm">
+      <div class="field-grid">
+        <label class="field">
+          <span>Name</span>
+          <input id="leadName" type="text" autocomplete="name" required />
+        </label>
+        <label class="field">
+          <span>Phone</span>
+          <input id="leadPhone" type="tel" autocomplete="tel" required />
+        </label>
+      </div>
+      <label class="field field-wide">
+        <span>Email</span>
+        <input id="leadEmail" type="email" autocomplete="email" required />
+      </label>
+      <label class="field field-wide">
+        <span>Property address</span>
+        <input id="leadAddress" type="text" autocomplete="street-address" />
+      </label>
+      <label class="field field-wide">
+        <span>Preferred contact method</span>
+        <select id="leadContactMethod">
+          <option>Phone call</option>
+          <option>Text message</option>
+          <option>Email</option>
+        </select>
+      </label>
+      <label class="field field-wide">
+        <span>Optional message</span>
+        <textarea id="leadMessage" rows="4" placeholder="Tell Hannah about your timing or questions."></textarea>
+      </label>
+      <button class="button primary full" type="submit">Send Request to Hannah</button>
+      <p class="form-privacy">The form opens a prepared email only after you submit it.</p>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="assets/seller-net-proceeds.js?v=1" defer></script>
+</body>
+</html>
