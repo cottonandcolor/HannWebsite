@@ -70,6 +70,14 @@ ul { margin: 0; padding-left: 1.1em; }
   height: auto;
   object-fit: contain;
 }
+.brand img.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: transparent;
+  padding: 0;
+}
 .brand-copy {
   display: flex; flex-direction: column;
   border-left: 1px solid var(--line);
@@ -96,41 +104,70 @@ ul { margin: 0; padding-left: 1.1em; }
 
 .hero {
   position: relative;
-  min-height: clamp(380px, 52vh, 520px);
-  max-height: 560px;
-  display: grid; align-items: end;
-  color: #fff; overflow: hidden;
+  min-height: clamp(520px, 78vh, 720px);
+  max-height: none;
+  display: grid;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
 }
 .hero-media { position: absolute; inset: 0; }
 .hero-photo {
   width: 100%; height: 100%; object-fit: cover;
-  object-position: center 28%;
+  object-position: center 35%;
   animation: heroDrift 32s ease-in-out infinite alternate;
 }
 .hero-scrim {
   position: absolute; inset: 0;
   background:
-    linear-gradient(105deg, rgba(12,18,16,.66) 0%, rgba(12,18,16,.32) 48%, rgba(12,18,16,.18) 100%),
-    linear-gradient(180deg, rgba(0,0,0,.22) 0%, rgba(0,0,0,.1) 45%, rgba(0,0,0,.62) 100%);
+    linear-gradient(105deg, rgba(8,10,12,.78) 0%, rgba(8,10,12,.42) 46%, rgba(8,10,12,.28) 100%),
+    linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,.12) 42%, rgba(0,0,0,.55) 100%);
 }
 .hero-inner {
   position: relative; z-index: 1;
-  padding: 96px 0 40px;
-  display: grid; gap: 16px;
+  padding: 120px 0 72px;
+  display: grid; gap: 0;
   animation: fadeUp .85s ease both;
 }
-.hero-brand {
-  font-size: clamp(40px, 6.5vw, 68px);
-  letter-spacing: -.02em;
+.hero-copy {
+  max-width: 34rem;
+  display: grid;
+  gap: 0;
+  justify-items: start;
+}
+.hero-kicker {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.92);
+}
+.hero-kicker::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 2px;
+  margin-top: 12px;
+  background: var(--accent);
+}
+.hero-title {
+  margin: 22px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5.2vw, 56px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.01em;
   color: #fff;
   text-shadow: 0 2px 28px rgba(0,0,0,.35);
 }
 .hero-lead {
-  margin-top: 8px;
+  margin: 18px 0 0;
   max-width: 42ch;
-  font-size: 15px;
-  line-height: 1.45;
-  color: rgba(255,255,255,.92);
+  font-size: 16px;
+  line-height: 1.55;
+  color: rgba(255,255,255,.9);
   font-weight: 500;
   text-shadow: 0 1px 12px rgba(0,0,0,.35);
 }
@@ -138,19 +175,9 @@ ul { margin: 0; padding-left: 1.1em; }
   display: flex; flex-wrap: wrap; gap: 12px;
   margin-top: 14px;
 }
-.button.ghost-light {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,.7);
-  color: #fff;
-}
-.button.ghost-light:hover {
-  background: #fff;
-  color: var(--ink);
-  border-color: #fff;
-}
 .hero-cta-pair {
   display: flex; flex-wrap: wrap; gap: 12px;
-  margin-top: 14px;
+  margin-top: 26px;
 }
 .button.ghost-light {
   background: transparent;
@@ -160,6 +187,33 @@ ul { margin: 0; padding-left: 1.1em; }
 .button.ghost-light:hover {
   background: #fff;
   color: var(--ink);
+  border-color: #fff;
+}
+.button.ghost-gold {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: #fff;
+}
+.button.ghost-gold:hover {
+  background: var(--accent);
+  color: #111;
+  border-color: var(--accent);
+}
+.hero-services {
+  margin: 28px 0 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.78);
+}
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: transparent;
+  padding: 0;
 }
 
 .tools-band, .valuation-band { padding: 80px 0; }
@@ -1008,9 +1062,9 @@ a.footer-contact-item:hover { color: var(--accent); }
   body { padding-bottom: 76px; }
   .nav { min-height: 68px; }
   .nav-links { top: 68px; }
-  .hero-brand { font-size: clamp(34px, 10vw, 48px); }
-  .hero-inner { padding-top: 88px; padding-bottom: 32px; }
-  .hero { min-height: clamp(340px, 48vh, 460px); max-height: 480px; }
+  .hero-title { font-size: clamp(30px, 8.5vw, 42px); }
+  .hero-inner { padding-top: 100px; padding-bottom: 48px; }
+  .hero { min-height: clamp(480px, 72vh, 640px); }
   .property-carousel { grid-template-columns: 1fr; gap: 8px; }
   .carousel-nav { display: none; }
   .property-carousel:has(.listings-carousel) {
