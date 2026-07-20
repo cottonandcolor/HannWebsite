@@ -279,7 +279,7 @@ td:last-child{text-align:right;font-weight:700}.total td{padding-top:15px;font-s
 <table>${rows.map(([label, amount]) => `<tr><td>${label}</td><td>${amount < 0 ? '− ' : ''}${currency(Math.abs(amount))}</td></tr>`).join('')}
 <tr class="total"><td>Total estimated deductions</td><td>− ${currency(v.deductions)}</td></tr>
 <tr class="total"><td>Estimated net proceeds</td><td>${currency(v.net)}</td></tr></table>
-<div class="contact"><strong>Hannah Mara, REALTOR® · Full Circle Real Estate</strong><br>512-680-1171 · hannah@fullcircle-realestate.com</div>
+<div class="contact"><strong>Hannah Mara, REALTOR® · Hannah Mara Realty · Full Circle Real Estate</strong><br>512-680-1171 · yourspacewithhannah@gmail.com</div>
 <div class="disclaimer">This calculator is provided for general educational and planning purposes only. It is not a settlement statement, appraisal, comparative market analysis, mortgage payoff quote, tax calculation or guarantee of proceeds. Actual costs and proceeds depend on the contract, negotiated broker compensation, lender payoff, title-company charges, prorations, repairs, concessions and other transaction-specific expenses. Broker compensation is not set by law and is fully negotiable.</div>
 </body></html>`;
 }
@@ -391,7 +391,7 @@ ${$('leadMessage').value}
 
 I understand this calculator result is a preliminary planning estimate.`
   );
-  window.location.href = `mailto:hannah@fullcircle-realestate.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:yourspacewithhannah@gmail.com?subject=${subject}&body=${body}`;
   $('leadDialog').close();
 });
 

@@ -1,11 +1,35 @@
 User-agent: *
 Allow: /
+Disallow: /v1/
+Disallow: /v2/
+Disallow: /v3/
+Disallow: /v4/
+Disallow: /v5/
+Disallow: /v6/
+Disallow: /v7/
+Disallow: /versions/
 
 User-agent: Googlebot
 Allow: /
+Disallow: /v1/
+Disallow: /v2/
+Disallow: /v3/
+Disallow: /v4/
+Disallow: /v5/
+Disallow: /v6/
+Disallow: /v7/
+Disallow: /versions/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /v1/
+Disallow: /v2/
+Disallow: /v3/
+Disallow: /v4/
+Disallow: /v5/
+Disallow: /v6/
+Disallow: /v7/
+Disallow: /versions/
 
 User-agent: ChatGPT-User
 Allow: /
