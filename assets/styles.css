@@ -96,8 +96,10 @@ ul { margin: 0; padding-left: 1.1em; }
 }
 .brand-copy {
   display: flex; flex-direction: column;
-  border-left: 1px solid var(--line);
-  padding-left: 14px;
+  border-left: 0;
+  border-right: 1px solid var(--line);
+  padding-left: 0;
+  padding-right: 14px;
 }
 .brand-copy strong { font-family: var(--font-display); font-size: 18px; font-weight: 400; }
 .brand-copy small {
