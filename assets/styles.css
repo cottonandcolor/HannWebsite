@@ -309,6 +309,9 @@ ul { margin: 0; padding-left: 1.1em; }
   font-size: clamp(40px, 6vw, 64px);
   letter-spacing: -.01em;
 }
+.portfolio .stack-heading h2 {
+  font-size: clamp(28px, 4vw, 42px);
+}
 
 .listings-intro {
   text-align: center;
