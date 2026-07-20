@@ -275,15 +275,40 @@ p{margin:0}
 .legal-card h2{font-size:24px}
 .legal-card p{margin-top:12px;color:#5f5c55;font-size:11px}
 .source-note{padding-top:10px;border-top:1px solid #d8d1c2}
-.footer{padding:45px 0 20px;background:var(--ink);color:var(--white)}
-.footer-grid{display:grid;grid-template-columns:1.1fr .8fr 1fr;gap:45px;align-items:center}
-.footer img{width:230px;padding:9px 13px;border-radius:12px;background:var(--white)}
-.footer strong,.footer span,.footer a{display:block}
-.footer strong{margin-bottom:7px;color:var(--champagne);font-size:12px}
-.footer span,.footer a{color:#aaa79e;font-size:11px;margin-top:4px}
-.footer-bottom{
-  display:flex;justify-content:space-between;gap:20px;margin-top:34px;padding-top:17px;
-  border-top:1px solid #37352f;color:#77746c;font-size:9px
+.hm-footer{background:#050505;color:#f5f5f0;padding:48px 32px 28px}
+.hm-footer a{color:#f5f5f0;text-decoration:none}
+.hm-footer a:hover{color:var(--champagne)}
+.hm-footer-inner{max-width:1400px;margin:0 auto}
+.hm-footer-top{
+  display:grid;grid-template-columns:1.1fr 1fr 1.2fr;gap:36px;align-items:start;
+  padding-bottom:34px;border-bottom:1px solid rgba(212,177,90,.5)
+}
+.hm-footer-logo-box{background:#fff;border-radius:18px;padding:18px;max-width:330px}
+.hm-footer-logo-box img{width:100%;height:auto;display:block}
+.hm-footer-heading,.hm-footer-name{
+  color:var(--champagne);font-family:Georgia,"Times New Roman",serif;font-size:18px;font-weight:700;
+  margin:0 0 14px;letter-spacing:.02em;text-transform:uppercase
+}
+.hm-footer-name{margin-bottom:8px}
+.hm-footer-role{font-size:14px;margin-bottom:16px}
+.hm-footer-contact p,.hm-footer-brokerage p{margin:0 0 12px;font-size:14px;line-height:1.5}
+.hm-footer-middle{
+  display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;
+  padding:28px 0;border-bottom:1px solid rgba(212,177,90,.5)
+}
+.hm-footer-social{display:flex;flex-wrap:wrap;gap:24px}
+.hm-footer-social a{font-size:14px;font-weight:500}
+.hm-footer-legal-links{display:flex;flex-direction:column;gap:10px}
+.hm-footer-legal-links a{font-size:10pt;text-decoration:underline;text-underline-offset:3px;line-height:1.3}
+.hm-footer-disclaimer{padding:24px 0;border-bottom:1px solid rgba(212,177,90,.5)}
+.hm-footer-disclaimer p{margin:0 0 10px;font-size:13px;line-height:1.6;color:#e2e2dc}
+.hm-footer-bottom{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding-top:26px}
+.hm-footer-copyright{font-size:13px;line-height:1.6;color:#e2e2dc}
+.hm-footer-badges{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:flex-end}
+.hm-footer-badge{font-size:13px;font-weight:600;color:#f5f5f0;white-space:nowrap}
+@media(max-width:980px){
+  .hm-footer-top,.hm-footer-middle,.hm-footer-bottom{grid-template-columns:1fr}
+  .hm-footer-badges{justify-content:flex-start}
 }
 .lead-dialog{
   position:relative;
@@ -344,12 +369,10 @@ p{margin:0}
   .secondary-actions{grid-template-columns:1fr}
   .cta-card{grid-template-columns:1fr;padding:20px}
   .cta-photo{height:360px}
-  .footer-grid{grid-template-columns:1fr}
-  .footer-bottom{flex-direction:column}
 }
 @media print{
   .site-header,.hero,.trust-strip,.calculator-form,.scenario-section,.education-section,.cta-section,
-  .legal-section,.footer,.result-actions,.result-disclaimer{display:none!important}
+  .legal-section,.hm-footer,.result-actions,.result-disclaimer{display:none!important}
   body{background:#fff}
   .calculator-section{padding:0}
   .calculator-layout{display:block}
