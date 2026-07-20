@@ -273,7 +273,8 @@ ul { margin: 0; padding-left: 1.1em; }
 .tool-form.is-success .form-row,
 .tool-form.is-success > label,
 .tool-form.is-success > .button,
-.tool-form.is-success > .form-note { display: none; }
+.tool-form.is-success > .form-note,
+.tool-form.is-success > .form-consent { display: none; }
 .idx-slot { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--line); }
 .idx-disclaimer { margin-top: 16px; font-size: 12px; color: var(--muted); }
 #idx-embed:empty::before {
@@ -763,6 +764,43 @@ ul { margin: 0; padding-left: 1.1em; }
   border-color: var(--accent); box-shadow: 0 0 0 3px rgba(195,163,90,.25);
 }
 .form-note { margin-top: 10px; color: var(--muted); font-size: 12px; }
+.form-consent {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 14px 16px;
+  background: #0a0a0a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.45;
+  cursor: pointer;
+}
+.form-consent input[type="checkbox"] {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.form-consent span { flex: 1; color: rgba(255,255,255,.92); }
+.form-consent a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+.form-consent a:hover { color: var(--accent); }
+.tool-form .form-consent,
+.contact-form .form-consent {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+}
 .form-success {
   margin-top: 14px; padding: 16px; background: #faf6e8; border: 1px solid #ead98a;
 }
@@ -772,7 +810,8 @@ ul { margin: 0; padding-left: 1.1em; }
 .contact-form.is-success .form-row,
 .contact-form.is-success > label,
 .contact-form.is-success > .button,
-.contact-form.is-success > .form-note { display: none; }
+.contact-form.is-success > .form-note,
+.contact-form.is-success > .form-consent { display: none; }
 
 .footer { background: #0a0a0a; color: #fff; padding: 56px 0 20px; }
 .footer-main { display: grid; gap: 28px; }
