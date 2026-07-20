@@ -80,9 +80,10 @@ ul { margin: 0; padding-left: 1.1em; }
   background: transparent;
   box-shadow: none;
 }
-.brand img {
-  width: min(210px, 40vw);
-  height: auto;
+.brand img,
+.brand .brand-logo {
+  width: auto;
+  height: 44px;
   object-fit: contain;
 }
 .brand img.brand-mark {
