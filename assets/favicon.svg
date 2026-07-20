@@ -2,22 +2,22 @@
   <!-- soft rounded night square -->
   <rect width="64" height="64" rx="14" fill="#111111"/>
   <!-- chimney -->
-  <rect x="40" y="18" width="7" height="12" rx="1.5" fill="#e6b800"/>
+  <rect x="40" y="18" width="7" height="12" rx="1.5" fill="#c3a35a"/>
   <!-- roof -->
-  <path d="M12 32 L32 14 L52 32 Z" fill="#e6b800"/>
+  <path d="M12 32 L32 14 L52 32 Z" fill="#c3a35a"/>
   <!-- roof edge / shadow band -->
-  <path d="M16 32 L32 18 L48 32 Z" fill="#f0d060"/>
+  <path d="M16 32 L32 18 L48 32 Z" fill="#d4bc7a"/>
   <!-- house body -->
   <rect x="18" y="31" width="28" height="22" rx="2.5" fill="#fff8e7"/>
   <!-- door -->
   <rect x="28" y="39" width="8" height="14" rx="1.5" fill="#111111"/>
-  <circle cx="34.5" cy="46.5" r="0.9" fill="#e6b800"/>
+  <circle cx="34.5" cy="46.5" r="0.9" fill="#c3a35a"/>
   <!-- left window -->
   <rect x="21" y="36" width="6" height="6" rx="1" fill="#111111"/>
-  <path d="M24 36v6 M21 39h6" stroke="#e6b800" stroke-width="0.8"/>
+  <path d="M24 36v6 M21 39h6" stroke="#c3a35a" stroke-width="0.8"/>
   <!-- right window -->
   <rect x="37" y="36" width="6" height="6" rx="1" fill="#111111"/>
-  <path d="M40 36v6 M37 39h6" stroke="#e6b800" stroke-width="0.8"/>
+  <path d="M40 36v6 M37 39h6" stroke="#c3a35a" stroke-width="0.8"/>
   <!-- heart in the door window -->
-  <path d="M31.2 41.2c0-.7.55-1.2 1.2-1.2.4 0 .7.2.9.5.2-.3.5-.5.9-.5.65 0 1.2.5 1.2 1.2 0 .9-1.1 1.7-2.1 2.5-.9-.8-2.1-1.6-2.1-2.5z" fill="#e6b800"/>
+  <path d="M31.2 41.2c0-.7.55-1.2 1.2-1.2.4 0 .7.2.9.5.2-.3.5-.5.9-.5.65 0 1.2.5 1.2 1.2 0 .9-1.1 1.7-2.1 2.5-.9-.8-2.1-1.6-2.1-2.5z" fill="#c3a35a"/>
 </svg>

@@ -1,8 +1,8 @@
 :root {
   --ink: #111111;
   --ink-soft: #2a2a2a;
-  --accent: #e6b800;
-  --accent-deep: #c49a00;
+  --accent: #c3a35a;
+  --accent-deep: #9e8148;
   --paper: #ffffff;
   --mist: #f7f7f5;
   --muted: #6a6a6a;
@@ -248,7 +248,7 @@ ul { margin: 0; padding-left: 1.1em; }
   padding: 12px; outline: 0;
 }
 .tool-form input:focus, .tool-form select:focus, .tool-form textarea:focus {
-  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(230,184,0,.2);
+  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(195,163,90,.25);
 }
 .form-row.triple { grid-template-columns: 1fr 1fr 1fr; }
 .tool-form .form-success { margin-top: 12px; }
@@ -742,7 +742,7 @@ ul { margin: 0; padding-left: 1.1em; }
   padding: 12px; outline: 0;
 }
 .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
-  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(230,184,0,.2);
+  border-color: var(--accent); box-shadow: 0 0 0 3px rgba(195,163,90,.25);
 }
 .form-note { margin-top: 10px; color: var(--muted); font-size: 12px; }
 .form-success {
