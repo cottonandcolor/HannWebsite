@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css?v=seo2" />
+  <link rel="stylesheet" href="assets/styles.css?v=seo3" />
 
   <script type="application/ld+json">
   {
@@ -220,11 +220,10 @@
 
       <div class="nav-links" id="nav-links">
         <a href="#listings">My Listings</a>
-        <a href="#sell">Home Value</a>
-        <a href="#services">Services</a>
-        <a href="#reviews">Reviews</a>
+        <a href="buyers.html">Buyers</a>
+        <a href="sellers.html">Sellers</a>
+        <a href="leasing.html">Leasing</a>
         <a href="#about">About</a>
-        <a href="#net-proceeds">Sellers</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </div>
     </nav>
@@ -957,11 +956,11 @@
         </div>
         <div class="services-grid">
           <article>
-            <h3>Austin realtor — buy &amp; sell</h3>
+            <h3><a href="buyers.html">Austin realtor — buy</a> &amp; <a href="sellers.html">sell</a></h3>
             <p>Buyer and seller representation for homes across Austin, Cedar Park, Leander, Round Rock, and nearby suburbs — pricing, showings, offers, and closing.</p>
           </article>
           <article>
-            <h3>Lease specialist Austin</h3>
+            <h3><a href="leasing.html">Lease specialist Austin</a></h3>
             <p>Residential leasing for landlords and tenants: listing strategy, applicant screening coordination, and lease-up support so rentals move without drama.</p>
           </article>
           <article>
@@ -1005,7 +1004,7 @@
             Thoughtful pricing, strong presentation and consistent communication — so your property is positioned clearly
             and every step stays organized through closing.
           </p>
-          <a class="button primary" href="#contact" data-inquiry="Selling a property">Get a listing consult</a>
+          <a class="button primary" href="sellers.html">Get a listing consult</a>
         </article>
         <article class="seller-card seller-card-alt" id="valuation">
           <p class="stack-eyebrow">Home value</p>
@@ -1013,7 +1012,7 @@
           <p>
             Get local comps and practical guidance on timing and list strategy — even if you are not ready to sell today.
           </p>
-          <a class="button ghost-dark" href="#contact" data-inquiry="Selling a property">Request a home valuation</a>
+          <a class="button ghost-dark" href="#contact-sellers">Request a home valuation</a>
         </article>
       </div>
     </section>
@@ -1025,7 +1024,7 @@
           <h2>Lifestyle</h2>
         </div>
         <div class="lifestyle-grid">
-          <a class="life-tile" href="#contact-family-homes" data-inquiry="Buying a home" style="--life-image:url('assets/path-buy.jpg')">
+          <a class="life-tile" href="buyers.html" style="--life-image:url('assets/path-buy.jpg')">
             <h3>Family Homes</h3>
             <span>Start a home search</span>
           </a>
@@ -1321,6 +1320,8 @@
       <div id="contact-acreage" class="contact-intent" tabindex="-1"></div>
       <div id="contact-new-construction" class="contact-intent" tabindex="-1"></div>
       <div id="contact-commercial" class="contact-intent" tabindex="-1"></div>
+      <div id="contact-sellers" class="contact-intent" tabindex="-1"></div>
+      <div id="contact-leasing" class="contact-intent" tabindex="-1"></div>
       <div class="container contact-grid">
         <div class="contact-copy">
           <p class="eyebrow">Contact Hannah</p>
@@ -1493,6 +1494,6 @@
     // Deploy → New deployment → Web app → Who has access: Anyone
     window.HANNAH_FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxBbzrz1G72ZfXRnb6jhkFZj3nN_4DGLAErIn8dbRkQlflnewR0LWY1g6UIiTBopfo/exec";
   </script>
-  <script src="assets/script.js?v=gas2"></script>
+  <script src="assets/script.js?v=gas3"></script>
 </body>
 </html>

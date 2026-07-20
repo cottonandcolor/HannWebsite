@@ -522,9 +522,15 @@ ul { margin: 0; padding-left: 1.1em; }
   background: transparent;
   border: 0;
 }
-.services-grid h3 {
-  font-size: clamp(22px, 2.2vw, 26px);
-  margin-bottom: 10px;
+.services-grid h3 a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(158, 129, 72, 0.45);
+}
+.services-grid h3 a:hover {
+  color: var(--accent-deep);
+  text-decoration-color: var(--accent-deep);
 }
 .services-grid p {
   color: var(--muted);
@@ -1498,4 +1504,168 @@ ul { margin: 0; padding-left: 1.1em; }
   .seller-net-teaser-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Service pages (buyers / sellers / leasing) */
+body.service-page-body {
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(195, 163, 90, 0.12), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(232, 230, 225, 0.9), transparent 50%),
+    var(--paper);
+}
+.site-header.service-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: var(--line);
+}
+.service-hero {
+  padding: 120px 0 56px;
+}
+.service-hero .eyebrow {
+  color: var(--accent-deep);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.service-hero h1 {
+  font-size: clamp(34px, 5.5vw, 52px);
+  max-width: 16ch;
+  margin-bottom: 18px;
+}
+.service-hero-lead {
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: clamp(16px, 2vw, 18px);
+  margin-bottom: 28px;
+}
+.service-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.service-hero-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+.service-answer {
+  padding: 0 0 64px;
+}
+.service-answer-card {
+  max-width: 720px;
+  padding: 28px 0 0;
+  border-top: 1px solid var(--line);
+}
+.service-answer-card h2 {
+  font-size: clamp(24px, 3vw, 32px);
+  margin-bottom: 12px;
+}
+.service-answer-card p {
+  color: var(--muted);
+  max-width: 58ch;
+  margin-bottom: 12px;
+}
+.service-answer-card p:last-child { margin-bottom: 0; }
+.service-section {
+  padding: 72px 0;
+}
+.service-section.mist { background: var(--mist); }
+.service-section .stack-heading { text-align: left; margin-bottom: 28px; }
+.service-section .stack-heading p.support {
+  margin-top: 12px;
+  color: var(--muted);
+  max-width: 52ch;
+  font-size: 15px;
+}
+.service-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.service-steps li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.service-steps li:last-child { border-bottom: 0; }
+.service-steps .step-num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--accent-deep);
+  line-height: 1;
+  min-width: 2ch;
+}
+.service-steps strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.service-steps span {
+  color: var(--muted);
+  font-size: 14px;
+}
+.service-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.service-split h3 {
+  font-size: clamp(22px, 2.4vw, 28px);
+  margin-bottom: 12px;
+}
+.service-split p,
+.service-split li {
+  color: var(--muted);
+  font-size: 15px;
+}
+.service-split ul {
+  margin: 0;
+  padding-left: 1.1em;
+  display: grid;
+  gap: 8px;
+}
+.service-cta-band {
+  padding: 72px 0;
+  background: var(--ink);
+  color: #f5f5f0;
+}
+.service-cta-band h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 8px 0 14px;
+  color: #fff;
+}
+.service-cta-band p {
+  color: rgba(245, 245, 240, 0.75);
+  max-width: 46ch;
+  margin-bottom: 24px;
+}
+.service-cta-band .stack-eyebrow { color: var(--accent); }
+.service-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.service-related {
+  padding: 48px 0 72px;
+}
+.service-related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+}
+.service-related-links a {
+  color: var(--accent-deep);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 720px) {
+  .service-split { grid-template-columns: 1fr; gap: 32px; }
+  .service-hero { padding-top: 100px; }
 }

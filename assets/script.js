@@ -34,6 +34,8 @@ const inquiryFromHash = {
   'contact-acreage': 'Land and acreage',
   'contact-new-construction': 'New construction',
   'contact-commercial': 'Commercial real estate',
+  'contact-sellers': 'Selling a property',
+  'contact-leasing': 'Residential lease',
 };
 
 const applyHashInquiry = () => {
