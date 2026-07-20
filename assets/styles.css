@@ -155,7 +155,7 @@ ul { margin: 0; padding-left: 1.1em; }
 .hero-title {
   margin: 16px 0 0;
   font-family: var(--font-display);
-  font-size: clamp(32px, 4.8vw, 52px);
+  font-size: clamp(28px, 4.2vw, 44px);
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: -.01em;
@@ -1054,7 +1054,7 @@ a.footer-contact-item:hover { color: var(--accent); }
   body { padding-bottom: 76px; }
   .nav { min-height: 68px; }
   .nav-links { top: 68px; }
-  .hero-title { font-size: clamp(26px, 7.5vw, 36px); }
+  .hero-title { font-size: clamp(24px, 6.8vw, 32px); }
   .hero-inner { padding-top: 78px; padding-bottom: 22px; }
   .hero { min-height: clamp(280px, 40vh, 380px); max-height: 400px; }
   .property-carousel { grid-template-columns: 1fr; gap: 8px; }
