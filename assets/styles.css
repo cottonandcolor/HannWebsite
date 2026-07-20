@@ -104,8 +104,8 @@ ul { margin: 0; padding-left: 1.1em; }
 
 .hero {
   position: relative;
-  min-height: clamp(380px, 52vh, 520px);
-  max-height: 560px;
+  min-height: clamp(280px, 38vh, 400px);
+  max-height: 420px;
   display: grid; align-items: end;
   color: #fff; overflow: hidden;
 }
@@ -123,8 +123,8 @@ ul { margin: 0; padding-left: 1.1em; }
 }
 .hero-inner {
   position: relative; z-index: 1;
-  padding: 96px 0 40px;
-  display: grid; gap: 16px;
+  padding: 84px 0 28px;
+  display: grid; gap: 12px;
   animation: fadeUp .85s ease both;
 }
 .hero-brand {
@@ -1007,9 +1007,9 @@ a.footer-contact-item:hover { color: var(--accent); }
   body { padding-bottom: 76px; }
   .nav { min-height: 68px; }
   .nav-links { top: 68px; }
-  .hero-brand { font-size: clamp(34px, 10vw, 48px); }
-  .hero-inner { padding-top: 88px; padding-bottom: 32px; }
-  .hero { min-height: clamp(340px, 48vh, 460px); max-height: 480px; }
+  .hero-brand { font-size: clamp(32px, 9vw, 44px); }
+  .hero-inner { padding-top: 76px; padding-bottom: 22px; }
+  .hero { min-height: clamp(250px, 36vh, 340px); max-height: 360px; }
   .property-carousel { grid-template-columns: 1fr; gap: 8px; }
   .carousel-nav { display: none; }
   .property-carousel:has(.listings-carousel) {
