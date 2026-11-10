@@ -13,6 +13,14 @@
   <meta name="theme-color" content="#111111" />
   <meta name="google-site-verification" content="Mgq0_2Ry38hmHGL8V-M1BzlGNnScZwXjgtFhv3UkKdI" />
   <link rel="canonical" href="https://yourspacewithhannah.com/" />
+  <script>
+    // GitHub Pages serves the same file at / and /index.html — keep / as the only public URL.
+    (function () {
+      if (/\/index\.html$/i.test(location.pathname)) {
+        location.replace(location.pathname.replace(/\/index\.html$/i, "/") + location.search + location.hash);
+      }
+    })();
+  </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="assets/favicon.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180" />

@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /index.html
 Disallow: /v1/
 Disallow: /v2/
 Disallow: /v3/
@@ -11,6 +12,7 @@ Disallow: /versions/
 
 User-agent: Googlebot
 Allow: /
+Disallow: /index.html
 Disallow: /v1/
 Disallow: /v2/
 Disallow: /v3/
@@ -22,6 +24,7 @@ Disallow: /versions/
 
 User-agent: Bingbot
 Allow: /
+Disallow: /index.html
 Disallow: /v1/
 Disallow: /v2/
 Disallow: /v3/
